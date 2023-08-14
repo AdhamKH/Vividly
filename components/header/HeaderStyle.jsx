@@ -28,7 +28,7 @@ export const HeaderStyle = styled.section`
     background-color: var(--mibooz-black);
     background-blend-mode: luminosity;
     transition: transform 7000ms ease, opacity 1500ms ease-in;
-    z-index: -1;
+    z-index: 1;
   }
 
   .main-slider .swiper-slide-active .image-layer {
