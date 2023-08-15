@@ -6,7 +6,7 @@ import { ServicesStyle } from "./ServicesStyle";
 
 const OurServices = () => {
   return (
-    <ServicesStyle>
+    <ServicesStyle id="services">
       <section className="services-one">
         <div
           className="services-one-shape"

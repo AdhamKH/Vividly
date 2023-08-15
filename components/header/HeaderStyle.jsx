@@ -1,6 +1,6 @@
 "use client";
 import { styled } from "styled-components";
-
+import { sunMove } from "../../style/animations";
 export const HeaderStyle = styled.section`
   .main-slider {
     position: relative;
@@ -42,7 +42,8 @@ export const HeaderStyle = styled.section`
     opacity: 0;
     transform: translateX(200px);
     z-index: 2;
-    animation: sunMove 10s linear infinite;
+    animation: ${sunMove} 10s linear infinite;
+    z-index: 9999;
   }
 
   .main-slider .swiper-slide-active .main-slider-badge {

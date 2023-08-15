@@ -2,6 +2,7 @@
 import { GlobalStyle } from "@/style/globalStyle";
 import React from "react";
 import Home from "./home/page";
+import Loader from "@/components/loader";
 
 const HomePage = () => {
   const [cssLoaded, setCssLoaded] = React.useState(false);
@@ -16,7 +17,7 @@ const HomePage = () => {
     <div>
       {/*  */}
       {!cssLoaded ? (
-        <h1>Loading....</h1>
+        <Loader />
       ) : (
         <>
           <GlobalStyle /> <Home />

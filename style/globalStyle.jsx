@@ -6,6 +6,15 @@ export const GlobalStyle = createGlobalStyle`
     margin: 0;
     box-sizing: border-box;
 }
+*, &:after, &:before {
+    box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth !important;
+}
+div{
+    display: block;
+}
 :root {
     --mibooz-font: 'Rubik', sans-serif;
     --mibooz-font-two: 'Federo', sans-serif;
@@ -23,6 +32,12 @@ export const GlobalStyle = createGlobalStyle`
     --mibooz-bdr-color: #e3e3e3;
     --mibooz-bdr-color-rgb: 227, 227, 227;
 }
+.sticky-nav{
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    background-color: red !important;
+}
 
 .row {
     --bs-gutter-x: 30px;
@@ -38,6 +53,8 @@ body {
     font-size: 18px;
     line-height: 36px;
     font-weight: 400;
+    overflow-x:hidden;  
+
 }
 
 body.locked {
@@ -2266,5 +2283,8 @@ ul {
 
 .error-page__btn {
     color: var(--mibooz-black);
+}
+.animated-container{
+    justify-content: center;
 }
 `;

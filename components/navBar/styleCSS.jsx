@@ -386,3 +386,9 @@ export const NabBarStyle = styled.div`
     }
   }
 `;
+export const StickeyNavBar = styled(NabBarStyle)`
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: red;
+`;

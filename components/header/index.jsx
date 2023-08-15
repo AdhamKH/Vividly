@@ -14,6 +14,9 @@ import mainSliderPadge from "../../assets/images/resources/main-slider-badge.png
 import Image from "next/image";
 import { Grid } from "@mui/material";
 import { HeaderStyle } from "./HeaderStyle";
+import Tilt from "../Common/Tilt";
+// import Tilt from "react-parallax-tilt";
+
 const Header = () => {
   return (
     <HeaderStyle>
@@ -43,7 +46,7 @@ const Header = () => {
                 autoplay={{
                   delay: 5000,
                 }}
-                modules={[EffectFade, Navigation, Pagination]}
+                modules={[EffectFade, Navigation, Pagination, Autoplay]}
               >
                 {/* <div className="swiper-wrapper"> */}
                 <SwiperSlide>
@@ -59,7 +62,7 @@ const Header = () => {
                   </div>
                   {/* image-layer */}
                   <div className="main-slider__social">
-                    <a href="#">facebook</a>
+                    <a href="#">facebook</a> <a href="#">youtube</a>
                     <a href="#">twitter</a>
                     <a href="#">instagram</a>
                   </div>
@@ -88,7 +91,15 @@ const Header = () => {
                             Discover More
                           </a>
                           <div className="main-slider-badge">
-                            <Image data-tilt src={mainSliderPadge} alt="" />
+                            <Tilt>
+                              {" "}
+                              <Image
+                                src={mainSliderPadge}
+                                alt=""
+                                width="180"
+                                height="180"
+                              />
+                            </Tilt>
                           </div>
                         </div>
                       </Grid>
@@ -117,7 +128,7 @@ const Header = () => {
                   </div>
                   {/* image-layer  */}
                   <div className="main-slider__social">
-                    <a href="#">facebook</a>
+                    <a href="#">facebook</a> <a href="#">youtube</a>
                     <a href="#">twitter</a>
                     <a href="#">instagram</a>
                   </div>
@@ -143,11 +154,14 @@ const Header = () => {
                             Discover More
                           </a>
                           <div className="main-slider-badge">
-                            <img
-                              data-tilt
-                              src="assets/images/resources/main-slider-badge.png"
-                              alt=""
-                            />
+                            <Tilt>
+                              <Image
+                                src={mainSliderPadge}
+                                alt=""
+                                width="180"
+                                height="180"
+                              />
+                            </Tilt>
                           </div>
                         </div>
                       </div>
@@ -173,7 +187,7 @@ const Header = () => {
                   </div>
                   {/* image-layer */}
                   <div className="main-slider__social">
-                    <a href="#">facebook</a>
+                    <a href="#">facebook</a> <a href="#">youtube</a>
                     <a href="#">twitter</a>
                     <a href="#">instagram</a>
                   </div>
@@ -199,11 +213,15 @@ const Header = () => {
                             Discover More
                           </a>
                           <div className="main-slider-badge">
-                            <img
-                              data-tilt
-                              src="assets/images/resources/main-slider-badge.png"
-                              alt=""
-                            />
+                            <Tilt>
+                              {" "}
+                              <Image
+                                src={mainSliderPadge}
+                                alt=""
+                                width="180"
+                                height="180"
+                              />
+                            </Tilt>
                           </div>
                         </div>
                       </div>

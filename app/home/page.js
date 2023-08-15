@@ -12,6 +12,10 @@ import WhyChooseUS from "@/components/whyChooseUs";
 import { GlobalStyle } from "@/style/globalStyle";
 import React from "react";
 
+export const metadata = {
+  title: "Home",
+  description: "",
+};
 const Home = () => {
   return (
     <div>
