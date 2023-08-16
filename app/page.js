@@ -20,7 +20,7 @@ const HomePage = () => {
         <Loader />
       ) : (
         <>
-          <GlobalStyle /> <Home />
+          <Home />
         </>
       )}
     </div>

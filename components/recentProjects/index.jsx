@@ -8,9 +8,10 @@ import img4 from "../../assets/images/resources/project-one-img-4.jpg";
 import img5 from "../../assets/images/resources/project-one-img-5.jpg";
 import img6 from "../../assets/images/resources/project-one-img-6.jpg";
 import Image from "next/image";
+import Link from "next/link";
 const RecentProjects = () => {
   return (
-    <RecentStyle>
+    <RecentStyle id="projects">
       <section className="project-one">
         <div className="container">
           <div className="section-title text-center">
@@ -53,7 +54,7 @@ const RecentProjects = () => {
                       <div className="project-one__hover">
                         <p className="project-one__tagline">Graphic</p>
                         <h3 className="project-one__title">
-                          <a href="project-details.html">Fimlor Experience</a>
+                          <Link href="single-project">Fimlor Experience</Link>
                         </h3>
                       </div>
                     </div>
@@ -71,7 +72,8 @@ const RecentProjects = () => {
                       <div className="project-one__hover">
                         <p className="project-one__tagline">Graphic</p>
                         <h3 className="project-one__title">
-                          <a href="project-details.html">Fimlor Experience</a>
+                          {/* <Link href="single-project">Fimlor Experience<Link /> */}
+                          <Link href="single-project">Fimlor Experience</Link>
                         </h3>
                       </div>
                     </div>
@@ -89,7 +91,7 @@ const RecentProjects = () => {
                       <div className="project-one__hover">
                         <p className="project-one__tagline">Graphic</p>
                         <h3 className="project-one__title">
-                          <a href="project-details.html">Fimlor Experience</a>
+                          <Link href="single-project">Fimlor Experience</Link>
                         </h3>
                       </div>
                     </div>
@@ -107,7 +109,7 @@ const RecentProjects = () => {
                       <div className="project-one__hover">
                         <p className="project-one__tagline">Graphic</p>
                         <h3 className="project-one__title">
-                          <a href="project-details.html">Fimlor Experience</a>
+                          <Link href="single-project">Fimlor Experience</Link>
                         </h3>
                       </div>
                     </div>
@@ -125,7 +127,7 @@ const RecentProjects = () => {
                       <div className="project-one__hover">
                         <p className="project-one__tagline">Graphic</p>
                         <h3 className="project-one__title">
-                          <a href="project-details.html">Fimlor Experience</a>
+                          <Link href="single-project">Fimlor Experience</Link>
                         </h3>
                       </div>
                     </div>
@@ -143,7 +145,7 @@ const RecentProjects = () => {
                       <div className="project-one__hover">
                         <p className="project-one__tagline">Graphic</p>
                         <h3 className="project-one__title">
-                          <a href="project-details.html">Fimlor Experience</a>
+                          <Link href="single-project">Fimlor Experience</Link>
                         </h3>
                       </div>
                     </div>

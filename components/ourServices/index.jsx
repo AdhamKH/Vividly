@@ -3,6 +3,7 @@ import mainSliderPadge from "../../assets/images/shapes/services-one-shape.png";
 import { Grid } from "@mui/material";
 import Image from "next/image";
 import { ServicesStyle } from "./ServicesStyle";
+import Link from "next/link";
 
 const OurServices = () => {
   return (
@@ -70,10 +71,10 @@ const OurServices = () => {
                   {/* <!--Services One Single--> */}
                   <div className="services-one__single">
                     <h3 className="services-one__title">
-                      <a href="mobile-application.html">
+                      <Link href="single-service">
                         mobile <br />
                         applications
-                      </a>
+                      </Link>
                     </h3>
                     <div className="services-one__icon">
                       <span className="icon-online-shopping"></span>
@@ -91,10 +92,10 @@ const OurServices = () => {
                   {/* <!--Services One Single--> */}
                   <div className="services-one__single">
                     <h3 className="services-one__title">
-                      <a href="digital-marketing.html">
+                      <Link href="single-service">
                         digital <br />
                         marketings
-                      </a>
+                      </Link>
                     </h3>
                     <div className="services-one__icon">
                       <span className="icon-growth"></span>
@@ -112,10 +113,10 @@ const OurServices = () => {
                   {/* <!--Services One Single--> */}
                   <div className="services-one__single">
                     <h3 className="services-one__title">
-                      <a href="graphic-designing.html">
+                      <Link href="single-service">
                         Graphic <br />
                         Designings
-                      </a>
+                      </Link>
                     </h3>
                     <div className="services-one__icon">
                       <span className="icon-webpage"></span>
@@ -133,10 +134,10 @@ const OurServices = () => {
                   {/* <!--Services One Single--> */}
                   <div className="services-one__single">
                     <h3 className="services-one__title">
-                      <a href="website-development.html">
+                      <Link href="single-service">
                         Website <br />
                         developments
-                      </a>
+                      </Link>
                     </h3>
                     <div className="services-one__icon">
                       <span className="icon-front-end"></span>
@@ -154,10 +155,10 @@ const OurServices = () => {
                   {/* <!--Services One Single--> */}
                   <div className="services-one__single">
                     <h3 className="services-one__title">
-                      <a href="social-marketing.html">
+                      <Link href="singservice">
                         Social <br />
                         marketings
-                      </a>
+                      </Link>
                     </h3>
                     <div className="services-one__icon">
                       <span className="icon-bullhorn"></span>
@@ -175,16 +176,16 @@ const OurServices = () => {
                   <div className="services-one__view-all">
                     <div className="services-one__view-all-title-box">
                       <h3 className="services-one__view-all-title">
-                        <a href="services.html">
+                        <Link href="single-servic">
                           View our <br />
                           all services
-                        </a>
+                        </Link>
                       </h3>
                     </div>
                     <div className="services-one__view-all-arrow">
-                      <a href="services.html">
+                      <Link href="single-servic">
                         <span className="icon-arrow-right"></span>
-                      </a>
+                      </Link>
                     </div>
                   </div>
                 </div>

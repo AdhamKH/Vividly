@@ -19,7 +19,7 @@ export const metadata = {
 const Home = () => {
   return (
     <div>
-      <GlobalStyle />
+      {/* <GlobalStyle /> */}
       <Header />
       <OurServices />
       <OurIntroductions />

@@ -1,6 +1,7 @@
 import { styled } from "styled-components";
 
 export const FooterStyle = styled.section`
+  width: 100% !important;
   .site-footer {
     position: relative;
     display: block;

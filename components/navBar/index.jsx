@@ -1,3 +1,4 @@
+"use client";
 import React, { useEffect, useState } from "react";
 import { NabBarStyle, StickeyNavBar } from "./styleCSS";
 import Image from "next/image";
@@ -18,7 +19,6 @@ const Navbar = () => {
       windowHeight > 150 ? setStickyClass("sticky-nav") : setStickyClass("");
     }
   };
-  console.log("stickyClass", stickyClass);
   return (
     <NabBarStyle>
       {stickyClass ? (
@@ -125,15 +125,15 @@ const Navbar = () => {
               </ul> */}
                         </li>
                         <li className="dropdown">
-                          <a href="#">Projects</a>
-                          <ul>
+                          <Link href="#projects">Projects</Link>
+                          {/* <ul>
                             <li>
                               <a href="project.html">Projects</a>
                             </li>
                             <li>
                               <a href="project-details.html">Project Details</a>
                             </li>
-                          </ul>
+                          </ul> */}
                         </li>
                         <li className="dropdown">
                           <a href="#">Blog</a>
@@ -269,15 +269,15 @@ const Navbar = () => {
               </ul> */}
                     </li>
                     <li className="dropdown">
-                      <a href="#">Projects</a>
-                      <ul>
+                      <Link href="#projects">Projects</Link>
+                      {/* <ul>
                         <li>
                           <a href="project.html">Projects</a>
                         </li>
                         <li>
                           <a href="project-details.html">Project Details</a>
                         </li>
-                      </ul>
+                      </ul> */}
                     </li>
                     <li className="dropdown">
                       <a href="#">Blog</a>
