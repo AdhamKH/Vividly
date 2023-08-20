@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 // import AnimatedNumbers from "react-animated-numbers";
 import dynamic from "next/dynamic";

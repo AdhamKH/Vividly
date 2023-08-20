@@ -1,7 +1,6 @@
 import { Suspense } from "react";
 import "./globals.css";
 import { Inter } from "next/font/google";
-import Loading from "./loading";
 import { GlobalStyle } from "@/style/globalStyle";
 const inter = Inter({ subsets: ["latin"] });
 

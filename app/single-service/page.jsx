@@ -8,7 +8,6 @@ import serviceDetailsBenefits from "../../assets/images/resources/service-detail
 import Image from "next/image";
 import Footer from "@/components/footer";
 import { Grid } from "@mui/material";
-import NavBarSecond from "@/components/navBarTwo";
 import { SingleServiceStyle } from "./singleServiceStyle";
 const SingleService = () => {
   return (

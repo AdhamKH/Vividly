@@ -1,5 +1,4 @@
 "use client";
-import { GlobalStyle } from "@/style/globalStyle";
 import React from "react";
 import Loader from "@/components/loader";
 import MyHome from "./myHome/page";
@@ -15,14 +14,13 @@ const HomePage = () => {
 
   return (
     <div>
-      {/*  */}
       {!cssLoaded ? (
         <Loader />
       ) : (
         <>
           <MyHome />
         </>
-      )}
+      )}{" "}
     </div>
   );
 };

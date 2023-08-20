@@ -21,7 +21,7 @@ const MyHome = () => {
       <OurIntroductions />
       <OurBrands />
       <DesignStudio />
-      <CounterOne />
+      {/* <CounterOne /> */}
       <WeCare />
       <RecentProjects />
       <WhyChooseUS />
