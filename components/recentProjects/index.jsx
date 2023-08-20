@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import { RecentStyle } from "./RecentStyle";
 import { Grid } from "@mui/material";

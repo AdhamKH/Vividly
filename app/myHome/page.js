@@ -1,26 +1,22 @@
+"use client";
+import About from "@/components/about";
 import CounterOne from "@/components/counterOne";
 import DesignStudio from "@/components/designStudio";
 import Footer from "@/components/footer";
 import Header from "@/components/header";
-import Navbar from "@/components/navBar";
 import OurBrands from "@/components/ourBrands";
 import OurIntroductions from "@/components/ourIntroductions";
 import OurServices from "@/components/ourServices";
 import RecentProjects from "@/components/recentProjects";
 import WeCare from "@/components/weCare";
 import WhyChooseUS from "@/components/whyChooseUs";
-import { GlobalStyle } from "@/style/globalStyle";
 import React from "react";
 
-export const metadata = {
-  title: "Home",
-  description: "",
-};
-const Home = () => {
+const MyHome = () => {
   return (
     <div>
-      {/* <GlobalStyle /> */}
       <Header />
+      <About />
       <OurServices />
       <OurIntroductions />
       <OurBrands />
@@ -34,4 +30,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default MyHome;

@@ -1,4 +1,4 @@
-// "use client";
+"use client";
 import React from "react";
 // import { jarallax } from "jarallax";
 // import "jarallax/dist/jarallax.css";

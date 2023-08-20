@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import { FooterStyle } from "./footerStyle";
 import Image from "next/image";

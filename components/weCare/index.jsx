@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import { WeCareStyle } from "./WeCareStyle";
 import weCareImg from "../../assets/images/resources/we-care-img.jpg";

@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import { WhyStyle } from "./whyStyle";
 import { Grid } from "@mui/material";

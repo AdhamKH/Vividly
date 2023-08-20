@@ -67,7 +67,7 @@ export const CounterStyle = styled.section`
   .counter-one__single {
     position: relative;
     flex: 0 0 25%;
-    max-width: 25%;
+    /* max-width: 25%; */
     width: 100%;
     text-align: center;
   }
@@ -127,5 +127,10 @@ export const CounterStyle = styled.section`
   }
   ul {
     list-style: none;
+    div {
+      /* display: flex; */
+      text-align: center;
+      justify-content: center;
+    }
   }
 `;

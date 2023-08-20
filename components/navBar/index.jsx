@@ -7,7 +7,7 @@ import Iconimg from "../../assets/images/resources/logo-1.png";
 import Link from "next/link";
 const Navbar = () => {
   const [stickyClass, setStickyClass] = useState("");
-
+  const [navMobile, setNavMobile] = React.useState(false);
   useEffect(() => {
     window.addEventListener("scroll", stickNavbar);
     return () => window.removeEventListener("scroll", stickNavbar);
@@ -20,40 +20,35 @@ const Navbar = () => {
     }
   };
   return (
-    <NabBarStyle>
+    <NabBarStyle navMobile={navMobile}>
       {stickyClass ? (
         <>
           {" "}
-          <div
-            style={{
-              position: "fixed",
-              top: "0",
-              left: "0",
-              color: "red",
-              background: "black",
-              zIndex: "99999999999999999999999999",
-              color: "white",
-              backgroundColor: "black",
-              width: "100%",
-            }}
-          >
+          <div className="mysticky">
             <div class="stricked-menu main-menu">
               <div class="sticky-header__content">
                 <nav className="main-menu clearfix">
                   <div className="main-menu-wrapper">
                     <div className="main-menu-wrapper__logo">
-                      <a href="index.html">
+                      <Link href="/">
                         <Image src={Iconimg} alt="" />
-                      </a>
+                      </Link>
                     </div>
                     <div className="main-menu-wrapper__main-menu">
                       <a href="#" className="mobile-nav__toggler">
-                        <i className="fa fa-bars"></i>
+                        <i
+                          className="fa fa-bars"
+                          onClick={() => {
+                            setNavMobile(!navMobile);
+                          }}
+                        >
+                          click
+                        </i>
                       </a>
                       <ul className="main-menu__list">
                         <li className="dropdown">
-                          <a href="index.html">Home</a>
-                          <ul>
+                          <Link href="/">Home</Link>
+                          {/* <ul>
                             <li>
                               <a href="index.html">Home One</a>
                             </li>
@@ -77,11 +72,11 @@ const Navbar = () => {
                                 </li>
                               </ul>
                             </li>
-                          </ul>
+                          </ul> */}
                         </li>
                         <li className="dropdown">
-                          <a href="#">Pages</a>
-                          <ul>
+                          <a href="#">About</a>
+                          {/* <ul>
                             <li>
                               <a href="about.html">About</a>
                             </li>
@@ -94,7 +89,7 @@ const Navbar = () => {
                             <li>
                               <a href="404.html">404 Error</a>
                             </li>
-                          </ul>
+                          </ul> */}
                         </li>
                         <li className="dropdown">
                           <Link href="#services" scroll={false}>
@@ -135,7 +130,7 @@ const Navbar = () => {
                             </li>
                           </ul> */}
                         </li>
-                        <li className="dropdown">
+                        {/* <li className="dropdown">
                           <a href="#">Blog</a>
                           <ul>
                             <li>
@@ -148,7 +143,7 @@ const Navbar = () => {
                               <a href="blog-details.html">Blog Details</a>
                             </li>
                           </ul>
-                        </li>
+                        </li> */}
                         <li>
                           <a href="contact.html">Contact</a>
                         </li>
@@ -186,18 +181,26 @@ const Navbar = () => {
             <nav className="main-menu clearfix">
               <div className="main-menu-wrapper">
                 <div className="main-menu-wrapper__logo">
-                  <a href="index.html">
+                  <Link href="/">
                     <Image src={Iconimg} alt="" />
-                  </a>
+                  </Link>
                 </div>
                 <div className="main-menu-wrapper__main-menu">
                   <a href="#" className="mobile-nav__toggler">
-                    <i className="fa fa-bars"></i>
+                    <i
+                      className="fa fa-bars"
+                      onClick={() => {
+                        setNavMobile(!navMobile);
+                      }}
+                    >
+                      click
+                    </i>
                   </a>
                   <ul className="main-menu__list">
                     <li className="dropdown">
-                      <a href="index.html">Home</a>
-                      <ul>
+                      <Link href="/">Home</Link>
+
+                      {/* <ul>
                         <li>
                           <a href="index.html">Home One</a>
                         </li>
@@ -221,11 +224,11 @@ const Navbar = () => {
                             </li>
                           </ul>
                         </li>
-                      </ul>
+                      </ul> */}
                     </li>
                     <li className="dropdown">
-                      <a href="#">Pages</a>
-                      <ul>
+                      <a href="#">About</a>
+                      {/* <ul>
                         <li>
                           <a href="about.html">About</a>
                         </li>
@@ -238,7 +241,7 @@ const Navbar = () => {
                         <li>
                           <a href="404.html">404 Error</a>
                         </li>
-                      </ul>
+                      </ul> */}
                     </li>
                     <li className="dropdown">
                       <Link href="#services" scroll={false}>
@@ -279,7 +282,7 @@ const Navbar = () => {
                         </li>
                       </ul> */}
                     </li>
-                    <li className="dropdown">
+                    {/* <li className="dropdown">
                       <a href="#">Blog</a>
                       <ul>
                         <li>
@@ -292,7 +295,7 @@ const Navbar = () => {
                           <a href="blog-details.html">Blog Details</a>
                         </li>
                       </ul>
-                    </li>
+                    </li> */}
                     <li>
                       <a href="contact.html">Contact</a>
                     </li>
@@ -320,6 +323,79 @@ const Navbar = () => {
               </div>
             </nav>
           </header>
+          <div class="mobile-nav__wrapper">
+            <div class="mobile-nav__overlay mobile-nav__toggler"></div>
+            {/* <!-- /.mobile-nav__overlay --> */}
+            <div class="mobile-nav__content">
+              <span class="mobile-nav__close mobile-nav__toggler">
+                <i
+                  class="fa fa-times"
+                  onClick={() => {
+                    setNavMobile(!navMobile);
+                  }}
+                >
+                  Close
+                </i>
+              </span>
+              <div class="logo-box">
+                <a href="index.html" aria-label="logo image">
+                  <img
+                    src="assets/images/resources/logo-1.png"
+                    width="155"
+                    alt=""
+                  />
+                </a>
+              </div>
+              {/* <!-- /.logo-box --> */}
+              <div class="mobile-nav__container">
+                <ul class="main-menu__list">
+                  <li class="dropdown current">
+                    <a href="index.html" class="">
+                      Home
+                    </a>
+                  </li>
+                  <li class="dropdown">
+                    <a href="#">Pages</a>
+                  </li>
+                  <li class="dropdown">
+                    <a href="services.html">Services</a>
+                  </li>
+                  <li class="dropdown">
+                    <a href="#">Projects</a>
+                  </li>
+
+                  <li>
+                    <a href="contact.html">Contact</a>
+                  </li>
+                </ul>
+              </div>{" "}
+              {/* <!-- /.mobile-nav__container --> */}
+              <ul class="mobile-nav__contact list-unstyled">
+                <li>
+                  <i class="fa fa-envelope"></i>
+                  <a href="mailto:needhelp@packageName__.com">
+                    needhelp@mibooz.com
+                  </a>
+                </li>
+                <li>
+                  <i class="fa fa-phone-alt"></i>
+                  <a href="tel:666-888-0000">666 888 0000</a>
+                </li>
+              </ul>
+              {/* <!-- /.mobile-nav__contact --> */}
+              <div class="mobile-nav__top">
+                <div class="mobile-nav__social">
+                  <a href="#" class="fab fa-twitter"></a>
+                  <a href="#" class="fab fa-facebook-square"></a>
+                  <a href="#" class="fab fa-pinterest-p"></a>
+                  <a href="#" class="fab fa-instagram"></a>
+                </div>
+                {/* <!-- /.mobile-nav__social --> */}
+              </div>
+              {/* <!-- /.mobile-nav__top --> */}
+            </div>
+            {/* <!-- /.mobile-nav__content --> */}
+          </div>
         </>
       )}
     </NabBarStyle>

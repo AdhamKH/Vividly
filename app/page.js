@@ -1,14 +1,14 @@
 "use client";
 import { GlobalStyle } from "@/style/globalStyle";
 import React from "react";
-import Home from "./home/page";
 import Loader from "@/components/loader";
+import MyHome from "./myHome/page";
 
 const HomePage = () => {
   const [cssLoaded, setCssLoaded] = React.useState(false);
   React.useEffect(() => {
     // Load CSS asynchronously
-    import("./home/page")
+    import("./myHome/page")
       .then(() => setCssLoaded(true))
       .catch((error) => console.error("Error loading CSS:", error));
   }, []);
@@ -20,7 +20,7 @@ const HomePage = () => {
         <Loader />
       ) : (
         <>
-          <Home />
+          <MyHome />
         </>
       )}
     </div>
