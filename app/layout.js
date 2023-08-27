@@ -6,11 +6,16 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
   title: "Vividly",
-  description: "",
+  description:
+    "Vivdly is a dynamic marketing and advertising agency that offers unique and interactive services to clients across all industries.",
 };
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      <meta name="keywords" content="vividly,web,marketing" />
+      <meta name="robots" content="index, follow" />
+      <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
+      <meta name="language" content="English"></meta>
       <body className={inter.className}>
         <GlobalStyle />
         {children}

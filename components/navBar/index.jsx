@@ -3,8 +3,9 @@ import React, { useEffect, useState } from "react";
 import { NabBarStyle, StickeyNavBar } from "./styleCSS";
 import Image from "next/image";
 import phoneIcon from "../../assets/images/icon/phone-icon.png";
-import Iconimg from "../../assets/images/resources/logo-1.png";
+import logo from "../../assets/images/vividly logo-01-06.svg";
 import Link from "next/link";
+import { MyAiOutlineMenu, MyCloseIcon } from "../Common/icons";
 const Navbar = () => {
   const [stickyClass, setStickyClass] = useState("");
   const [navMobile, setNavMobile] = React.useState(false);
@@ -31,7 +32,7 @@ const Navbar = () => {
                   <div className="main-menu-wrapper">
                     <div className="main-menu-wrapper__logo">
                       <Link href="/">
-                        <Image src={Iconimg} alt="" />
+                        <Image src={logo} alt="logo" width="200" />
                       </Link>
                     </div>
                     <div className="main-menu-wrapper__main-menu">
@@ -42,7 +43,7 @@ const Navbar = () => {
                             setNavMobile(!navMobile);
                           }}
                         >
-                          click
+                          <MyAiOutlineMenu />
                         </i>
                       </a>
                       <ul className="main-menu__list">
@@ -182,7 +183,7 @@ const Navbar = () => {
               <div className="main-menu-wrapper">
                 <div className="main-menu-wrapper__logo">
                   <Link href="/">
-                    <Image src={Iconimg} alt="" />
+                    <Image src={logo} alt="logo" width="200" />
                   </Link>
                 </div>
                 <div className="main-menu-wrapper__main-menu">
@@ -193,7 +194,7 @@ const Navbar = () => {
                         setNavMobile(!navMobile);
                       }}
                     >
-                      click
+                      <MyAiOutlineMenu />
                     </i>
                   </a>
                   <ul className="main-menu__list">
@@ -334,16 +335,12 @@ const Navbar = () => {
                     setNavMobile(!navMobile);
                   }}
                 >
-                  Close
+                  <MyCloseIcon />
                 </i>
               </span>
               <div class="logo-box">
                 <a href="index.html" aria-label="logo image">
-                  <img
-                    src="assets/images/resources/logo-1.png"
-                    width="155"
-                    alt=""
-                  />
+                  <Image src={logo} alt="logo" width="155"></Image>
                 </a>
               </div>
               {/* <!-- /.logo-box --> */}

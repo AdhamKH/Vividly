@@ -1,14 +1,14 @@
 "use client";
-import React from "react";
-import { SingleProjectStyle } from "./style";
+import React, { use } from "react";
 import Navbar from "@/components/navBar";
 import Footer from "@/components/footer";
 import Image from "next/image";
 import { Grid } from "@mui/material";
-import image1 from "../../assets/images/resources/project-details-img.jpg";
-import pageBackground from "../../assets/images/backgrounds/page-header-bg.jpg";
+import image1 from "../../../assets/images/resources/project-details-img.jpg";
+import pageBackground from "../../../assets/images/backgrounds/page-header-bg.jpg";
+import { SingleProjectStyle } from "../style";
 
-const SingleProject = () => {
+const SingleProject = ({ params }) => {
   return (
     <SingleProjectStyle>
       <div className="page-wrapper">

@@ -504,4 +504,7 @@ export const HeaderStyle = styled.section`
       max-width: 540px;
     }
   }
+  .thm-btn {
+    visibility: hidden !important;
+  }
 `;

@@ -67,6 +67,7 @@ export const ServicesStyle = styled.section`
     padding: 82px 40px 34px;
     overflow: hidden;
     z-index: 1;
+    min-height: 11rem;
   }
 
   .services-one__single:before {

@@ -133,6 +133,9 @@ export const SingleServiceStyle = styled.div`
     background: none;
     padding: 8.5px 20px;
   }
+  .service-details__sidebar-service-list li p {
+    max-width: 90%;
+  }
 
   .service-details__sidebar-service-list li.current a,
   .service-details__sidebar-service-list li a:hover {
@@ -153,11 +156,14 @@ export const SingleServiceStyle = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 10px;
+    font-size: 28px;
   }
 
   .service-details__sidebar-service-list li a span.icon-right-arrow-angle {
     font-weight: bold;
+    svg {
+      font-size: 28px;
+    }
   }
 
   .service-details__sidebar-service-list li.current a span,
@@ -374,7 +380,7 @@ export const SingleServiceStyle = styled.div`
   .service-details__benefits-list li {
     position: relative;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
   }
 
   .service-details__benefits-list li .icon {
@@ -383,8 +389,10 @@ export const SingleServiceStyle = styled.div`
   }
 
   .service-details__benefits-list li .icon span {
-    font-size: 16px;
-    color: var(--mibooz-primary);
+    svg {
+      font-size: 16px;
+      color: var(--mibooz-primary);
+    }
   }
 
   .service-details__benefits-list li .text {
@@ -420,5 +428,63 @@ export const SingleServiceStyle = styled.div`
     top: -1px;
     left: -1px;
     bottom: -1px;
+  }
+  /* Faqs */
+  .faqs {
+    width: 100%;
+    max-width: 768px;
+    margin: 0 auto;
+    padding: 15px;
+  }
+
+  .faqs .faq {
+    margin: 15px;
+    padding: 15px;
+    background: #fff;
+    /* border-radius: 10px; */
+    /* box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1); */
+    padding: 1rem 1rem;
+    border: 1px solid var(--mibooz-bdr-color);
+  }
+
+  .faqs .faq .faq-question {
+    position: relative;
+    font-size: 20px;
+    padding-right: 80px;
+    transition: all 0.4s ease;
+  }
+
+  .faqs .faq .faq-question::after {
+    /* content: "+"; */
+    position: absolute;
+    top: 50%;
+    right: 0px;
+    transform: translateY(-50%);
+    width: 30px;
+    height: 30px;
+    transition: all 0.2s ease;
+  }
+
+  .faqs .faq .faq-answer {
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.2s ease;
+  }
+
+  .faqs .faq.open .faq-question {
+    /* margin-bottom: 15px; */
+  }
+
+  /* .faqs .faq.open .faq-question::after {
+    content: "-";
+  } */
+
+  .faqs .faq.open .faq-answer {
+    max-height: 1000px;
+    opacity: 1;
+  }
+  .q_btn {
+    display: flex;
   }
 `;

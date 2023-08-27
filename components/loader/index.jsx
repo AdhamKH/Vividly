@@ -7,7 +7,7 @@ const Loader = () => {
   return (
     <LoaderStyle>
       <div className="preloader">
-        <Image width="60" height="60" src={imgLoader} alt="" />
+        <Image width="60" height="60" src={imgLoader} alt="loader" />
       </div>
     </LoaderStyle>
   );

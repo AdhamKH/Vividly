@@ -1,3 +1,4 @@
+"use client";
 import { styled } from "styled-components";
 import { rotateme } from "../../style/animations";
 export const LoaderStyle = styled.div`

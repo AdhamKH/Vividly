@@ -17,12 +17,12 @@ const MyHome = () => {
     <div>
       <Header />
       <About />
-      <OurServices />
-      <OurIntroductions />
       <OurBrands />
-      <DesignStudio />
+      <OurServices />
+      {/* <OurIntroductions /> */}
+      {/* <DesignStudio /> */}
       {/* <CounterOne /> */}
-      <WeCare />
+      {/* <WeCare /> */}
       <RecentProjects />
       <WhyChooseUS />
       <Footer />

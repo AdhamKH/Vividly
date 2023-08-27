@@ -15,7 +15,7 @@ import Image from "next/image";
 import { Grid } from "@mui/material";
 import { HeaderStyle } from "./HeaderStyle";
 import Tilt from "../Common/Tilt";
-// import Tilt from "react-parallax-tilt";
+import { MyChevronLeftIcon, MyChevronRightIcon } from "../Common/icons";
 
 const Header = () => {
   return (
@@ -241,13 +241,17 @@ const Header = () => {
                     className="swiper-button-prev"
                     id="main-slider__swiper-button-next"
                   >
-                    <span className="icon-arrow-left">click</span>
+                    <span className="icon-arrow-left">
+                      <MyChevronLeftIcon />
+                    </span>
                   </div>
                   <div
                     className="swiper-button-next"
                     id="main-slider__swiper-button-prev"
                   >
-                    <span className="icon-arrow-right">click</span>
+                    <span className="icon-arrow-right">
+                      <MyChevronRightIcon />
+                    </span>
                   </div>
                 </div>
               </div>
