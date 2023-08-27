@@ -19,7 +19,7 @@ import {
 } from "@/components/dynamicArrays/services";
 import Link from "next/link";
 import { SingleServiceStyle } from "../singleServiceStyle";
-import { useSearchParams } from "next/navigation";
+import { usePathname, useRouter, useSearchParams } from "next/navigation";
 
 const fetchingData = async () => {
   try {
@@ -32,7 +32,11 @@ const fetchingData = async () => {
   }
 };
 const dataPromis = fetchingData();
-const SingleService = ({ params }) => {
+const SingleService = ({ id }) => {
+  const router = useRouter();
+  const pathname = usePathname();
+  const searchParams = useSearchParams();
+  console.log("pathname", pathname.split("/")[2]);
   const data = use(dataPromis);
   let allServices = data?.data;
   const [singleService, setSingleService] = React.useState({});
@@ -70,7 +74,9 @@ const SingleService = ({ params }) => {
   };
   React.useEffect(() => {
     let request = async () => {
-      await fetch(`https://api.adgrouptech.com/api/v1/services/${params.id}`)
+      await fetch(
+        `https://api.adgrouptech.com/api/v1/services/${pathname.split("/")[2]}`
+      )
         .then((res) => res.json())
         .then((data) => setSingleService(data.data));
     };
@@ -78,7 +84,7 @@ const SingleService = ({ params }) => {
   }, []);
   let benefits = [];
   let why = [];
-  switch (params.id) {
+  switch (pathname.split("/")[2]) {
     case "20":
       benefits = service_20_benefits;
       why = service_20_why;
