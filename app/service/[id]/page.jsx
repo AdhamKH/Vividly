@@ -139,7 +139,7 @@ const SingleService = ({ params }) => {
                         {allServices?.map((service) => {
                           return (
                             <li>
-                              <Link href={`single-service/${service?.id}`}>
+                              <Link href={`service/${service?.id}`}>
                                 <p> {service?.title} </p>
                                 <span className="icon-arrow-right">
                                   <MyCgArrowLongRight />
