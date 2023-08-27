@@ -23,7 +23,12 @@ const dataPromis = fetchingData();
 const OurServices = () => {
   const data = use(dataPromis);
   let allServices = data?.data;
-
+  let newAllService = allServices.map((service) => ({
+    id: service.id.toString(),
+    title: service.title.toString(),
+  }));
+  console.log("newAllService", newAllService);
+  console.log("allServices", allServices);
   return (
     <ServicesStyle id="services">
       {/* <ParallaxProvider> */}
@@ -78,7 +83,7 @@ const OurServices = () => {
               justifyItems="stretch"
               justifySelf="stretch"
             >
-              {allServices?.map((service, index) => {
+              {newAllService?.map((service, index) => {
                 return (
                   <Grid item xs={12} md={6} lg={4}>
                     <div
@@ -88,7 +93,7 @@ const OurServices = () => {
                       {/* <!--Services One Single--> */}
                       <div className="services-one__single">
                         <h3 className="services-one__title">
-                          <Link href={`/service/${service?.id?.toString()}`}>
+                          <Link href={`/service/${service?.id}`}>
                             {service?.title}
                           </Link>
                         </h3>
