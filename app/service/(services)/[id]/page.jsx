@@ -1,14 +1,13 @@
 "use client";
 import Navbar from "@/components/navBar";
 import React, { use } from "react";
-import pageBackground from "../../../assets/images/backgrounds/page-header-bg.jpg";
-import helpBackground from "../../../assets/images/backgrounds/service-details-need-help-bg.jpg";
-import serviceDetails from "../../../assets/images/resources/service-details-img-2.jpg";
-import serviceDetailsBenefits from "../../../assets/images/resources/service-details__benefits-img.jpg";
+import pageBackground from "../../../../assets/images/backgrounds/page-header-bg.jpg";
+import helpBackground from "../../../../assets/images/backgrounds/service-details-need-help-bg.jpg";
+import serviceDetails from "../../../../assets/images/resources/service-details-img-2.jpg";
+import serviceDetailsBenefits from "../../../../assets/images/resources/service-details__benefits-img.jpg";
 import Image from "next/image";
 import Footer from "@/components/footer";
 import { Grid } from "@mui/material";
-import { SingleServiceStyle } from "../singleServiceStyle";
 import FAQ from "@/components/Faq";
 import {
   MyAiFillCheckCircle,
@@ -20,6 +19,7 @@ import {
   service_20_why,
 } from "@/components/dynamicArrays/services";
 import Link from "next/link";
+import { SingleServiceStyle } from "../../singleServiceStyle";
 
 const fetchingData = async () => {
   try {
