@@ -88,7 +88,7 @@ const OurServices = () => {
                   <Grid item xs={12} md={6} lg={4}>
                     <div
                       className="col-xl-4 col-lg-4 wow fadeInUp"
-                      data-wow-delay="100ms"
+                      // data-wow-delay="100ms"
                     >
                       {/* <!--Services One Single--> */}
                       <div className="services-one__single">

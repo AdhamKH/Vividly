@@ -19,6 +19,7 @@ import {
 } from "@/components/dynamicArrays/services";
 import Link from "next/link";
 import { SingleServiceStyle } from "../singleServiceStyle";
+import { useSearchParams } from "next/navigation";
 
 const fetchingData = async () => {
   try {
@@ -31,7 +32,7 @@ const fetchingData = async () => {
   }
 };
 const dataPromis = fetchingData();
-const SingleService = ({ params }) => {
+const SingleService = () => {
   const data = use(dataPromis);
   let allServices = data?.data;
   const [singleService, setSingleService] = React.useState({});
@@ -73,19 +74,19 @@ const SingleService = ({ params }) => {
         .then((res) => res.json())
         .then((data) => setSingleService(data.data));
     };
-    request();
+    // request();
   }, []);
   let benefits = [];
   let why = [];
-  switch (params.id) {
-    case "20":
-      benefits = service_20_benefits;
-      why = service_20_why;
-      break;
+  // switch (params.id) {
+  //   case "20":
+  //     benefits = service_20_benefits;
+  //     why = service_20_why;
+  //     break;
 
-    default:
-      break;
-  }
+  //   default:
+  //     break;
+  // }
   console.log("singleService", singleService);
   return (
     <SingleServiceStyle>
