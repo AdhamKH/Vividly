@@ -1,10 +1,10 @@
 "use client";
 import Navbar from "@/components/navBar";
 import React, { use } from "react";
-import pageBackground from "../../../../assets/images/backgrounds/page-header-bg.jpg";
-import helpBackground from "../../../../assets/images/backgrounds/service-details-need-help-bg.jpg";
-import serviceDetails from "../../../../assets/images/resources/service-details-img-2.jpg";
-import serviceDetailsBenefits from "../../../../assets/images/resources/service-details__benefits-img.jpg";
+import pageBackground from "../../../assets/images/backgrounds/page-header-bg.jpg";
+import helpBackground from "../../../assets/images/backgrounds/service-details-need-help-bg.jpg";
+import serviceDetails from "../../../assets/images/resources/service-details-img-2.jpg";
+import serviceDetailsBenefits from "../../../assets/images/resources/service-details__benefits-img.jpg";
 import Image from "next/image";
 import Footer from "@/components/footer";
 import { Grid } from "@mui/material";
@@ -13,13 +13,12 @@ import {
   MyAiFillCheckCircle,
   MyCgArrowLongRight,
 } from "@/components/Common/icons";
-import getService from "@/lib/getServiceData";
 import {
   service_20_benefits,
   service_20_why,
 } from "@/components/dynamicArrays/services";
 import Link from "next/link";
-import { SingleServiceStyle } from "../../singleServiceStyle";
+import { SingleServiceStyle } from "../singleServiceStyle";
 
 const fetchingData = async () => {
   try {
@@ -139,7 +138,7 @@ const SingleService = ({ params }) => {
                         {allServices?.map((service) => {
                           return (
                             <li>
-                              <Link href={`service/${service?.id}`}>
+                              <Link href={`/service/${service?.id}`}>
                                 <p> {service?.title} </p>
                                 <span className="icon-arrow-right">
                                   <MyCgArrowLongRight />
