@@ -32,7 +32,7 @@ const fetchingData = async () => {
   }
 };
 const dataPromis = fetchingData();
-const SingleService = () => {
+const SingleService = ({ params }) => {
   const data = use(dataPromis);
   let allServices = data?.data;
   const [singleService, setSingleService] = React.useState({});
