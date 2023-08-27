@@ -74,19 +74,19 @@ const SingleService = ({ params }) => {
         .then((res) => res.json())
         .then((data) => setSingleService(data.data));
     };
-    // request();
+    request();
   }, []);
   let benefits = [];
   let why = [];
-  // switch (params.id) {
-  //   case "20":
-  //     benefits = service_20_benefits;
-  //     why = service_20_why;
-  //     break;
+  switch (params.id) {
+    case "20":
+      benefits = service_20_benefits;
+      why = service_20_why;
+      break;
 
-  //   default:
-  //     break;
-  // }
+    default:
+      break;
+  }
   console.log("singleService", singleService);
   return (
     <SingleServiceStyle>
@@ -106,7 +106,7 @@ const SingleService = ({ params }) => {
 
           <div className="container">
             <div className="page-header__inner">
-              {/* <ul className="thm-breadcrumb list-unstyled">
+              <ul className="thm-breadcrumb list-unstyled">
                 {allServices?.map((service) => {
                   return (
                     <li>
@@ -116,7 +116,7 @@ const SingleService = ({ params }) => {
                     </li>
                   );
                 })}
-              </ul> */}
+              </ul>
               <h2>{singleService?.title}</h2>
             </div>
           </div>
