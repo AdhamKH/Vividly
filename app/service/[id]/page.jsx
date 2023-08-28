@@ -188,7 +188,7 @@ export default function UserPage({ params }) {
                       <ul className="service-details__sidebar-service-list list-unstyled">
                         {allServices?.data?.map((service) => {
                           return (
-                            <li>
+                            <li className={service.id == id ? "current" : ""}>
                               <Link href={`/service/${service?.id}`}>
                                 <p> {service?.title} </p>
                                 <span className="icon-arrow-right">
