@@ -1,6 +1,7 @@
 "use client";
 import About from "@/components/about";
 import CounterOne from "@/components/counterOne";
+import CustomerFeedBack from "@/components/customersFeedBack";
 import DesignStudio from "@/components/designStudio";
 import Footer from "@/components/footer";
 import Header from "@/components/header";
@@ -17,6 +18,7 @@ const MyHome = () => {
     <div>
       <Header />
       <About />
+      <CustomerFeedBack />
       <OurBrands />
       <OurServices />
       {/* <OurIntroductions /> */}

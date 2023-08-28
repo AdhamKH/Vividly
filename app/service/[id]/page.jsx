@@ -32,16 +32,6 @@ import { SingleServiceStyle } from "../singleServiceStyle";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import getService from "@/lib/getServiceData";
 
-// export async function generateMetadata({ params: { id } }) {
-//   const userData = getService(id);
-//   const user = await userData;
-
-//   return {
-//     title: user.name,
-//     description: `This is the page of ${user.name}`,
-//   };
-// }
-
 function makeQueryClient() {
   const fetchMap = new Map();
   return function queryClient(name, query) {

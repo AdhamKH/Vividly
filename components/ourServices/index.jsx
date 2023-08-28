@@ -29,6 +29,9 @@ const OurServices = () => {
   }));
   console.log("newAllService", newAllService);
   console.log("allServices", allServices);
+  var encodedString = "%5Bid%5D";
+
+  console.log("check this", encodeURIComponent("%5Bid%5D"));
   return (
     <ServicesStyle id="services">
       {/* <ParallaxProvider> */}
