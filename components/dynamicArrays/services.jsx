@@ -13,3 +13,5 @@ export let service_20_why = [
   "Lasting Impact: We lay the foundation for a brand that evolves and resonates for years to come.",
   "Collaborative Process: We involve you every step of the way, ensuring your vision shapes the strategy.",
 ];
+
+export let service_21_benefits = [""];

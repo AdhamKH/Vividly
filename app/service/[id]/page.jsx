@@ -1,6 +1,6 @@
 "use client";
 import Navbar from "@/components/navBar";
-import React, { use } from "react";
+import React, { Suspense, use } from "react";
 import pageBackground from "../../../assets/images/backgrounds/page-header-bg.jpg";
 import helpBackground from "../../../assets/images/backgrounds/service-details-need-help-bg.jpg";
 import serviceDetails from "../../../assets/images/resources/service-details-img-2.jpg";
@@ -16,30 +16,65 @@ import {
 import {
   service_20_benefits,
   service_20_why,
+  service_21_benefits,
 } from "@/components/dynamicArrays/services";
 import Link from "next/link";
 import { SingleServiceStyle } from "../singleServiceStyle";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
+import getService from "@/lib/getServiceData";
 
-const fetchingData = async () => {
-  try {
-    const res = await fetch(
-      "https://api.adgrouptech.com/api/v1/services/company/10"
-    );
-    return res.json();
-  } catch (e) {
-    return e;
+// export async function generateMetadata({ params: { id } }) {
+//   const userData = getService(id);
+//   const user = await userData;
+
+//   return {
+//     title: user.name,
+//     description: `This is the page of ${user.name}`,
+//   };
+// }
+
+function makeQueryClient() {
+  const fetchMap = new Map();
+  return function queryClient(name, query) {
+    if (!fetchMap.has(name)) {
+      fetchMap.set(name, query());
+    }
+    return fetchMap.get(name);
+  };
+}
+
+const queryClient = makeQueryClient();
+
+export default function UserPage({ params }) {
+  console.log("params", params);
+  const { id } = params;
+  const singleService = use(
+    queryClient("singleService", () =>
+      fetch(`https://api.adgrouptech.com/api/v1/services/${id}`).then((res) =>
+        res.json()
+      )
+    )
+  );
+  const allServices = use(
+    queryClient("allServices", () =>
+      fetch(`https://api.adgrouptech.com/api/v1/services/company/10`).then(
+        (res) => res.json()
+      )
+    )
+  );
+  let why = [];
+  let benefits = [];
+  switch (id) {
+    case "20":
+      why = service_20_why;
+      benefits = service_20_benefits;
+      break;
+    case "21":
+      // why = service_21_why;
+      benefits = service_21_benefits;
+    default:
+      break;
   }
-};
-const dataPromis = fetchingData();
-const SingleService = ({ id }) => {
-  const router = useRouter();
-  const pathname = usePathname();
-  const searchParams = useSearchParams();
-  console.log("pathname", pathname.split("/")[2]);
-  const data = use(dataPromis);
-  let allServices = data?.data;
-  const [singleService, setSingleService] = React.useState({});
   const [faqs, setFaqs] = React.useState([
     {
       question: "How many programmers does it take to screw a lightbulb?",
@@ -72,27 +107,7 @@ const SingleService = ({ id }) => {
       })
     );
   };
-  React.useEffect(() => {
-    let request = async () => {
-      await fetch(
-        `https://api.adgrouptech.com/api/v1/services/${pathname.split("/")[2]}`
-      )
-        .then((res) => res.json())
-        .then((data) => setSingleService(data.data));
-    };
-    request();
-  }, []);
-  let benefits = [];
-  let why = [];
-  switch (pathname.split("/")[2]) {
-    case "20":
-      benefits = service_20_benefits;
-      why = service_20_why;
-      break;
-
-    default:
-      break;
-  }
+  console.log("allServices", allServices.data);
   console.log("singleService", singleService);
   return (
     <SingleServiceStyle>
@@ -113,15 +128,22 @@ const SingleService = ({ id }) => {
           <div className="container">
             <div className="page-header__inner">
               <ul className="thm-breadcrumb list-unstyled">
-                {allServices?.map((service) => {
-                  return (
-                    <li>
-                      <Link href={`single-service/${service?.id}`}>
-                        {service?.title}
-                      </Link>
-                    </li>
-                  );
-                })}
+                {allServices.data.length > 0 ? (
+                  <>
+                    {" "}
+                    {allServices.data.map((service) => {
+                      return (
+                        <li>
+                          <Link href={`single-service/${service?.id}`}>
+                            {service?.title}
+                          </Link>
+                        </li>
+                      );
+                    })}
+                  </>
+                ) : (
+                  <></>
+                )}
               </ul>
               <h2>{singleService?.title}</h2>
             </div>
@@ -142,7 +164,7 @@ const SingleService = ({ id }) => {
                         Categories
                       </h4>
                       <ul className="service-details__sidebar-service-list list-unstyled">
-                        {allServices?.map((service) => {
+                        {allServices?.data?.map((service) => {
                           return (
                             <li>
                               <Link href={`/service/${service?.id}`}>
@@ -182,10 +204,10 @@ const SingleService = ({ id }) => {
                     </div>
                     <div className="service-details__content">
                       <h3 className="service-details__title">
-                        {singleService?.title}
+                        {singleService?.data?.title}
                       </h3>
                       <p className="service-details__text">
-                        {singleService?.description}
+                        {singleService?.data?.description}
                       </p>
                     </div>
                     <ul className="service-details__points">
@@ -325,6 +347,4 @@ const SingleService = ({ id }) => {
       </div>
     </SingleServiceStyle>
   );
-};
-
-export default SingleService;
+}
