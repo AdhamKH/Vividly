@@ -162,7 +162,7 @@ const CustomerFeedBack = () => {
                 <div className="main-slider__nav">
                   <div
                     className="swiper-button-prev"
-                    id="main-slider__swiper-button-next"
+                    id="main-slider__swiper-button-prev"
                   >
                     <span className="icon-arrow-left">
                       <MyChevronLeftIcon />
@@ -170,7 +170,7 @@ const CustomerFeedBack = () => {
                   </div>
                   <div
                     className="swiper-button-next"
-                    id="main-slider__swiper-button-prev"
+                    id="main-slider__swiper-button-next"
                   >
                     <span className="icon-arrow-right">
                       <MyChevronRightIcon />
