@@ -17,6 +17,15 @@ import {
   service_20_benefits,
   service_20_why,
   service_21_benefits,
+  service_21_why,
+  service_22_benefits,
+  service_22_why,
+  service_23_benefits,
+  service_23_why,
+  service_24_benefits,
+  service_24_why,
+  service_25_benefits,
+  service_25_why,
 } from "@/components/dynamicArrays/services";
 import Link from "next/link";
 import { SingleServiceStyle } from "../singleServiceStyle";
@@ -70,8 +79,21 @@ export default function UserPage({ params }) {
       benefits = service_20_benefits;
       break;
     case "21":
-      // why = service_21_why;
+      why = service_21_why;
       benefits = service_21_benefits;
+    case "22":
+      why = service_22_why;
+      benefits = service_22_benefits;
+    case "23":
+      why = service_23_why;
+      benefits = service_23_benefits;
+    case "24":
+      why = service_24_why;
+      benefits = service_24_benefits;
+    case "25":
+      why = service_25_why;
+      benefits = service_25_benefits;
+
     default:
       break;
   }
@@ -128,7 +150,7 @@ export default function UserPage({ params }) {
           <div className="container">
             <div className="page-header__inner">
               <ul className="thm-breadcrumb list-unstyled">
-                {allServices.data.length > 0 ? (
+                {/* {allServices.data.length > 0 ? (
                   <>
                     {" "}
                     {allServices.data.map((service) => {
@@ -143,9 +165,9 @@ export default function UserPage({ params }) {
                   </>
                 ) : (
                   <></>
-                )}
+                )} */}
               </ul>
-              <h2>{singleService?.title}</h2>
+              <h2>{singleService?.data?.title}</h2>
             </div>
           </div>
         </section>
