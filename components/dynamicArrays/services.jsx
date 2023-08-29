@@ -6,12 +6,41 @@ export let service_20_benefits = [
   "Increased Market Share: A well-executed brand strategy can lead to a larger market presence.",
 ];
 export let service_20_why = [
-  "Expert Insight: Our seasoned strategists possess the know-how to unravel your brand's potential.",
-  "Tailored Solutions: We craft strategies that align with your industry, audience, and goals.",
-  "Holistic Approach: We consider every touchpoint, from visuals to messaging, for a unified brand experience.",
-  "Competitive Edge: Our strategies position you as a market leader, standing out in a sea of competitors.",
-  "Lasting Impact: We lay the foundation for a brand that evolves and resonates for years to come.",
-  "Collaborative Process: We involve you every step of the way, ensuring your vision shapes the strategy.",
+  {
+    question: "Expert Insight",
+    answer:
+      "Our seasoned strategists possess the know-how to unravel your brand's potential.",
+    open: "",
+  },
+  {
+    question: "Tailored Solutions",
+    answer:
+      "We craft strategies that align with your industry, audience, and goals.",
+    open: "",
+  },
+  {
+    question: "Holistic Approach",
+    answer:
+      "We consider every touchpoint, from visuals to messaging, for a unified brand experience.",
+    open: "",
+  },
+  {
+    question: "Competitive Edge",
+    answer:
+      "Our strategies position you as a market leader, standing out in a sea of competitors.",
+    open: "",
+  },
+  {
+    question: "Lasting Impact",
+    answer: "",
+    open: "We lay the foundation for a brand that evolves and resonates for years to come.",
+  },
+  {
+    question: "Collaborative Process",
+    answer:
+      "We involve you every step of the way, ensuring your vision shapes the strategy.",
+    open: "",
+  },
 ];
 
 export let service_21_benefits = [
@@ -22,12 +51,42 @@ export let service_21_benefits = [
   "Enhanced Brand Visibility: Our digital expertise ensures your brand shines in the digital realm",
 ];
 export let service_21_why = [
-  "Multifaceted Approach: We harness the power of various digital channels to create an integrated strategy.",
-  "Creativity Meets Data: Our campaigns combine creative storytelling with data-driven decision-making.",
-  "ROI-Focused: We ensure your marketing budget delivers measurable returns and long-term value.",
-  "Agile Adaptation: Our strategies evolve to stay relevant in the fast-paced digital landscape.",
-  "Targeted Engagement: We zero in on your ideal audience, nurturing meaningful interactions.",
-  "Comprehensive Solutions: From brand awareness to conversions, we cover every stage of the customer journey.",
+  {
+    question: "Multifaceted Approach",
+    answer:
+      "We harness the power of various digital channels to create an integrated strategy.",
+    open: "",
+  },
+  {
+    question: "Creativity Meets Data",
+    answer:
+      "Our campaigns combine creative storytelling with data-driven decision-making.",
+    open: "",
+  },
+  {
+    question: "ROI-Focused",
+    answer:
+      "We ensure your marketing budget delivers measurable returns and long-term value.",
+    open: "",
+  },
+  {
+    question: "Agile Adaptation",
+    answer:
+      "Our strategies evolve to stay relevant in the fast-paced digital landscape.",
+    open: "",
+  },
+  {
+    question: "Targeted Engagement",
+    answer:
+      "We zero in on your ideal audience, nurturing meaningful interactions.",
+    open: "",
+  },
+  {
+    question: "Comprehensive Solutions",
+    answer:
+      "From brand awareness to conversions, we cover every stage of the customer journey.",
+    open: "",
+  },
 ];
 
 export let service_22_benefits = [
@@ -38,12 +97,42 @@ export let service_22_benefits = [
   "Cost-Effective Strategy: Organic search traffic often offers a better return on investment.",
 ];
 export let service_22_why = [
-  "Technical Mastery: Our team is well-versed in both on-page and off-page SEO techniques.",
-  "Customized Approach: We tailor our strategies to fit the unique challenges of your industry.",
-  "Content Excellence: Our content optimization ensures value for both users and search engines.",
-  "Constant Evolution: SEO algorithms change, and we're always adapting to keep your site on top.",
-  "Comprehensive Audit: We analyze your entire digital footprint to uncover optimization opportunities.",
-  "Organic Growth: Our strategies drive natural, sustained growth in search engine rankings.",
+  {
+    question: "Technical Mastery",
+    answer:
+      "Our team is well-versed in both on-page and off-page SEO techniques.",
+    open: "",
+  },
+  {
+    question: "Customized Approach",
+    answer:
+      "We tailor our strategies to fit the unique challenges of your industry.",
+    open: "",
+  },
+  {
+    question: "Content Excellence",
+    answer:
+      "Our content optimization ensures value for both users and search engines.",
+    open: "",
+  },
+  {
+    question: "Constant Evolution",
+    answer:
+      "SEO algorithms change, and we're always adapting to keep your site on top.",
+    open: "",
+  },
+  {
+    question: "Comprehensive Audit",
+    answer:
+      "We analyze your entire digital footprint to uncover optimization opportunities.",
+    open: "",
+  },
+  {
+    question: "Organic Growth",
+    answer:
+      "Our strategies drive natural, sustained growth in search engine rankings.",
+    open: "",
+  },
 ];
 
 export let service_23_benefits = [
@@ -54,12 +143,42 @@ export let service_23_benefits = [
   "Elevated Communication: Creative designs convey complex messages in a visually appealing manner.",
 ];
 export let service_23_why = [
-  "Creative Brilliance: Our design experts infuse creativity into every pixel, creating visual masterpieces.",
-  "Strategic Vision: We blend aesthetics with strategy, ensuring designs align with your brand's goals.",
-  "Versatile Solutions: From graphic design to video production, we cover a spectrum of creative needs.",
-  "Storytelling Mastery: Our content resonates deeply, conveying messages that leave a lasting impact.",
-  "Unique Identity: We craft visuals that reflect your brand's personality, setting you apart from the rest.",
-  "Collaborative Journey: We involve you in the creative process, ensuring your vision comes to life.",
+  {
+    question: "Creative Brilliance",
+    answer:
+      "Our design experts infuse creativity into every pixel, creating visual masterpieces.",
+    open: "",
+  },
+  {
+    question: "Strategic Vision",
+    answer:
+      "We blend aesthetics with strategy, ensuring designs align with your brand's goals.",
+    open: "",
+  },
+  {
+    question: "Versatile Solutions",
+    answer:
+      "From graphic design to video production, we cover a spectrum of creative needs.",
+    open: "",
+  },
+  {
+    question: "Storytelling Mastery",
+    answer:
+      "Storytelling Mastery: Our content resonates deeply, conveying messages that leave a lasting impact.",
+    open: "",
+  },
+  {
+    question: "Unique Identity",
+    answer:
+      "We craft visuals that reflect your brand's personality, setting you apart from the rest.",
+    open: "",
+  },
+  {
+    question: "Collaborative Journey",
+    answer:
+      "We involve you in the creative process, ensuring your vision comes to life.",
+    open: "",
+  },
 ];
 
 export let service_24_benefits = [
@@ -70,12 +189,41 @@ export let service_24_benefits = [
   "Trendsetting Appeal: Embracing AR establishes your brand as innovative and forward-thinking.",
 ];
 export let service_24_why = [
-  "Innovative Expertise: Our AR specialists are pioneers in crafting captivating augmented reality experiences.",
-  "Creative Flair: We blend technology with creative vision to design AR that's both imaginative and impactful.",
-  "Platform Proficiency: Our team is well-versed in creating AR filters for Instagram and Snapchat.",
-  "Engaging Interactions: We create AR that draws users in, fostering longer and more memorable engagements.",
-  "Brand-Centric Approach: Our AR experiences align with your brand's values and messaging.",
-  "Cutting-Edge Solutions: We stay at the forefront of AR trends, delivering the latest in interactive storytelling.",
+  {
+    question: "Innovative Expertise",
+    answer:
+      "Our AR specialists are pioneers in crafting captivating augmented reality experiences.",
+    open: "",
+  },
+  {
+    question: "Creative Flair",
+    answer:
+      "We blend technology with creative vision to design AR that's both imaginative and impactful.",
+    open: "",
+  },
+  {
+    question: "Platform Proficiency",
+    answer:
+      "Our team is well-versed in creating AR filters for Instagram and Snapchat.",
+    open: "",
+  },
+  {
+    question: "Engaging Interactions",
+    answer:
+      "We create AR that draws users in, fostering longer and more memorable engagements.",
+    open: "",
+  },
+  {
+    question: "Brand-Centric Approach",
+    answer: "Our AR experiences align with your brand's values and messaging.",
+    open: "",
+  },
+  {
+    question: "Cutting-Edge Solutions",
+    answer:
+      "We stay at the forefront of AR trends, delivering the latest in interactive storytelling.",
+    open: "",
+  },
 ];
 
 export let service_25_benefits = [
@@ -86,10 +234,40 @@ export let service_25_benefits = [
   "Business Growth: A well-optimized website supports your business's growth trajectory.",
 ];
 export let service_25_why = [
-  "Custom Craftsmanship: We build websites from scratch, tailoring functionality to your business needs.",
-  "User-Centered Approach: Our designs prioritize user experience, resulting in intuitive navigation.",
-  "Mobile-Friendly Design: Websites are optimized for various devices, ensuring a seamless experience.",
-  "Speed and Performance: Our developers prioritize site speed, optimizing load times for users.",
-  "Future-Ready Solutions: Our websites are built with scalability in mind, adapting to your growth.",
-  "Secure and Reliable: We ensure robust security measures to protect your website and user data.",
+  {
+    question: "Custom Craftsmanship",
+    answer:
+      "We build websites from scratch, tailoring functionality to your business needs.",
+    open: "",
+  },
+  {
+    question: "User-Centered Approach",
+    answer:
+      "Our designs prioritize user experience, resulting in intuitive navigation.",
+    open: "",
+  },
+  {
+    question: "Mobile-Friendly Design",
+    answer:
+      "Websites are optimized for various devices, ensuring a seamless experience.",
+    open: "",
+  },
+  {
+    question: "Speed and Performance",
+    answer:
+      "Our developers prioritize site speed, optimizing load times for users.",
+    open: "",
+  },
+  {
+    question: "Future-Ready Solutions",
+    answer:
+      "Our websites are built with scalability in mind, adapting to your growth.",
+    open: "",
+  },
+  {
+    question: "Secure and Reliable",
+    answer:
+      "We ensure robust security measures to protect your website and user data.",
+    open: "",
+  },
 ];

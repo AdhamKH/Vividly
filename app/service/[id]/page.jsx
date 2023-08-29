@@ -87,25 +87,7 @@ export default function UserPage({ params }) {
     default:
       break;
   }
-  const [faqs, setFaqs] = React.useState([
-    {
-      question: "How many programmers does it take to screw a lightbulb?",
-      answer:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pharetra lorem eu dolor rhoncus, at scelerisque ligula gravida. Sed porta id mi sit amet convallis. Etiam iaculis massa sit amet lacus blandit sodales. Nulla ultrices velit a diam placerat congue. Pellentesque iaculis, ipsum quis eleifend dapibus, est dui eleifend ante, quis fermentum mi ligula quis nisl. Ut et ex dui. Integer id venenatis quam.",
-      open: true,
-    },
-    {
-      question: "Who is the most awesome person?",
-      answer: "You! The viewer!",
-      open: false,
-    },
-    {
-      question:
-        "How many questions does it take to makes a succesful FAQ Page?",
-      answer: "This many!",
-      open: false,
-    },
-  ]);
+  const [faqs, setFaqs] = React.useState(why);
   const toggleFAQ = (index) => {
     setFaqs(
       faqs.map((faq, i) => {
@@ -119,8 +101,7 @@ export default function UserPage({ params }) {
       })
     );
   };
-  console.log("allServices", allServices.data);
-  console.log("singleService", singleService);
+
   return (
     <SingleServiceStyle>
       <div className="page-wrapper">
@@ -234,45 +215,6 @@ export default function UserPage({ params }) {
                     </ul>
                     <div className="service-details__benefits">
                       {/* <div className="row"> */}
-                      <Grid container columns={12}>
-                        <Grid item xs={12} md={6}>
-                          <div className="col-xl-6">
-                            <div className="service-details__benefits-content">
-                              <h3 className="service-details__benefits-title">
-                                why choose us
-                              </h3>
-                              {/* <p className="service-details__benefits-text">
-                                Duis aute irure dolor in simply free text exist
-                                on reprehende voluptate velit esse cillum.
-                              </p> */}
-                              <ul className="list-unstyled service-details__benefits-list">
-                                {why?.map((e, index) => {
-                                  return (
-                                    <li key={index}>
-                                      <div className="icon">
-                                        <span className="icon-check">
-                                          {" "}
-                                          <MyAiFillCheckCircle />
-                                        </span>
-                                      </div>
-                                      <div className="text">
-                                        <p>{e}</p>
-                                      </div>
-                                    </li>
-                                  );
-                                })}
-                              </ul>
-                            </div>
-                          </div>
-                        </Grid>
-                        <Grid item xs={12} md={6}>
-                          <div className="col-xl-6">
-                            <div className="service-details__benefits-img">
-                              <Image src={serviceDetailsBenefits} alt="" />
-                            </div>
-                          </div>
-                        </Grid>
-                      </Grid>
 
                       {/* </div> */}
                     </div>
@@ -326,6 +268,9 @@ export default function UserPage({ params }) {
                         // data-grp-name="faq-one-accrodion"
                       > */}
                       <div className="faqs">
+                        <h3 className="service-details__benefits-title">
+                          Why This Service
+                        </h3>
                         {faqs.map((faq, index) => (
                           <FAQ
                             faq={faq}

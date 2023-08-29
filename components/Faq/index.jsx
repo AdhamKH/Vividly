@@ -8,7 +8,10 @@ const FAQ = ({ faq, index, toggleFAQ }) => {
       <div className={"faq " + (faq.open ? "open" : "")} key={index}>
         <div className="q_btn">
           {" "}
-          <div className="faq-question">{faq.question}</div>
+          <div className="faq-question">
+            {faq.question}
+            {faq.open ? <> :</> : <> ...</>}
+          </div>
           {faq.open ? (
             <button onClick={() => toggleFAQ(index)}>
               <MyBiMinus />

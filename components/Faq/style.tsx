@@ -6,6 +6,12 @@ export const FaqStyle = styled.div`
     max-width: 768px;
     margin: 0 auto;
     padding: 15px;
+    .title {
+      font-size: 26px;
+      text-transform: uppercase;
+      line-height: 36px;
+      margin-bottom: 24px;
+    }
   }
 
   .faqs .faq {
@@ -21,7 +27,7 @@ export const FaqStyle = styled.div`
     position: relative;
     font-size: 20px;
     padding-right: 80px;
-    transition: all 0.4s ease;
+    transition: all 0.8s cubic-bezier(0.075, 0.82, 0.165, 1);
   }
 
   .faqs .faq .faq-question::after {
@@ -32,14 +38,14 @@ export const FaqStyle = styled.div`
     transform: translateY(-50%);
     width: 30px;
     height: 30px;
-    transition: all 0.2s ease;
+    transition: all 0.4s ease;
   }
 
   .faqs .faq .faq-answer {
     opacity: 0;
     max-height: 0;
     overflow: hidden;
-    transition: all 0.2s ease;
+    transition: all 0.4s ease;
   }
 
   .faqs .faq.open .faq-question {
