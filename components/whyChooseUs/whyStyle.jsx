@@ -10,7 +10,7 @@ export const WhyStyle = styled.section`
   .why-choose-one__left {
     position: relative;
     display: block;
-    margin-left: -374px;
+    margin-left: -200px;
   }
 
   .why-choose-one__left:before {

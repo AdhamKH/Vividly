@@ -38,12 +38,12 @@ const OurServices = () => {
       <section className="services-one">
         {" "}
         <div className="services-one-shape">
-          {/* <Image
-              src={mainSliderPadge}
-              layout="fill"
-              objectFit="cover"
-              objectPosition="center"
-            /> */}
+          <Image
+            src={mainSliderPadge}
+            layout="fill"
+            objectFit="cover"
+            objectPosition="center"
+          />
         </div>
         <div className="container">
           <div className="services-one__top">

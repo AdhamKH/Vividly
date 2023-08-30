@@ -115,6 +115,9 @@ export default function UserPage({ params }) {
       })
     );
   };
+  benefits.map((e) => {
+    console.log("E", e.split(":")[0]);
+  });
 
   return (
     <SingleServiceStyle>
@@ -196,8 +199,8 @@ export default function UserPage({ params }) {
                         Best Quality <br /> services
                       </h2>
                       <div className="service-details__need-help-contact">
-                        <p>Call us Anytime</p>
-                        <a href="tel:926668880000">+ 92 666 888 0000</a>
+                        {/* <p>Call us Anytime</p> */}
+                        <Link href="/contact-us">Contact us</Link>
                       </div>
                     </div>
                   </div>
@@ -260,7 +263,21 @@ export default function UserPage({ params }) {
                                         </span>
                                       </div>
                                       <div className="text">
-                                        <p>{e}</p>
+                                        <span
+                                          style={{
+                                            fontWeight: "700",
+                                            fontSize: "1.2rem",
+                                          }}
+                                        >
+                                          {e.split(":")[0]} :
+                                        </span>{" "}
+                                        <span
+                                          style={{
+                                            fontSize: "1.0rem",
+                                          }}
+                                        >
+                                          {e.split(":")[1]}
+                                        </span>
                                       </div>
                                     </li>
                                   );
