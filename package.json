@@ -22,6 +22,7 @@
     "react-scroll-parallax": "^3.4.2",
     "styled-components": "^6.0.2",
     "swiper": "^10.0.3",
+    "swr": "^2.2.2",
     "wow.js": "^1.2.2"
   }
 }

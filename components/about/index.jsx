@@ -14,7 +14,7 @@ import teamImg4 from "../../assets/images/team/team-one-img-4.jpg";
 // import teamImg5 from "../../assets/images/team/team-one-img-5.jpg";
 const About = () => {
   return (
-    <AboutStyle>
+    <AboutStyle id="about">
       <section className="about-page">
         <div className="container">
           <Grid container columns={12} spacing={3}>

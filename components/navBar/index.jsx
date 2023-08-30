@@ -5,7 +5,14 @@ import Image from "next/image";
 import phoneIcon from "../../assets/images/icon/phone-icon.png";
 import logo from "../../assets/images/vividly logo-01-06.svg";
 import Link from "next/link";
-import { MyAiOutlineMenu, MyCloseIcon } from "../Common/icons";
+import {
+  MyAiFillFacebook,
+  MyAiFillYoutube,
+  MyAiOutlineMenu,
+  MyCloseIcon,
+  MyFaTwitter,
+  MyLuInstagram,
+} from "../Common/icons";
 const Navbar = () => {
   const [stickyClass, setStickyClass] = useState("");
   const [navMobile, setNavMobile] = React.useState(false);
@@ -76,7 +83,7 @@ const Navbar = () => {
                           </ul> */}
                         </li>
                         <li className="dropdown">
-                          <a href="#">About</a>
+                          <a href="/#about">About</a>
                           {/* <ul>
                             <li>
                               <a href="about.html">About</a>
@@ -93,7 +100,7 @@ const Navbar = () => {
                           </ul> */}
                         </li>
                         <li className="dropdown">
-                          <Link href="#services" scroll={false}>
+                          <Link href="/#services" scroll={false}>
                             Services
                           </Link>
                           {/* <ul>
@@ -121,7 +128,7 @@ const Navbar = () => {
               </ul> */}
                         </li>
                         <li className="dropdown">
-                          <Link href="#projects">Projects</Link>
+                          <Link href="/#projects">Projects</Link>
                           {/* <ul>
                             <li>
                               <a href="project.html">Projects</a>
@@ -228,7 +235,7 @@ const Navbar = () => {
                       </ul> */}
                     </li>
                     <li className="dropdown">
-                      <a href="#">About</a>
+                      <a href="/#about">About</a>
                       {/* <ul>
                         <li>
                           <a href="about.html">About</a>
@@ -245,7 +252,7 @@ const Navbar = () => {
                       </ul> */}
                     </li>
                     <li className="dropdown">
-                      <Link href="#services" scroll={false}>
+                      <Link href="/#services" scroll={false}>
                         Services
                       </Link>
                       {/* <ul>
@@ -298,7 +305,7 @@ const Navbar = () => {
                       </ul>
                     </li> */}
                     <li>
-                      <a href="contact.html">Contact</a>
+                      <a href="/contact">Contact</a>
                     </li>
                   </ul>
                 </div>
@@ -347,22 +354,22 @@ const Navbar = () => {
               <div class="mobile-nav__container">
                 <ul class="main-menu__list">
                   <li class="dropdown current">
-                    <a href="index.html" class="">
+                    <Link href="/" class="">
                       Home
-                    </a>
+                    </Link>
                   </li>
                   <li class="dropdown">
-                    <a href="#">Pages</a>
+                    <Link href="/#">About</Link>
                   </li>
                   <li class="dropdown">
-                    <a href="services.html">Services</a>
+                    <Link href="/#services">Services</Link>
                   </li>
                   <li class="dropdown">
-                    <a href="#">Projects</a>
+                    <Link href="/#">Projects</Link>
                   </li>
 
                   <li>
-                    <a href="contact.html">Contact</a>
+                    <Link href="contact.html">Contact</Link>
                   </li>
                 </ul>
               </div>{" "}
@@ -382,10 +389,18 @@ const Navbar = () => {
               {/* <!-- /.mobile-nav__contact --> */}
               <div class="mobile-nav__top">
                 <div class="mobile-nav__social">
-                  <a href="#" class="fab fa-twitter"></a>
-                  <a href="#" class="fab fa-facebook-square"></a>
-                  <a href="#" class="fab fa-pinterest-p"></a>
-                  <a href="#" class="fab fa-instagram"></a>
+                  <a href="#" class="fab fa-twitter">
+                    <MyFaTwitter />
+                  </a>
+                  <a href="#" class="fab fa-facebook-square">
+                    <MyAiFillFacebook />
+                  </a>
+                  <a href="#" class="fab fa-pinterest-p">
+                    <MyAiFillYoutube />
+                  </a>
+                  <a href="#" class="fab fa-instagram">
+                    <MyLuInstagram />
+                  </a>
                 </div>
                 {/* <!-- /.mobile-nav__social --> */}
               </div>

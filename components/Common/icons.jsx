@@ -24,6 +24,10 @@ import { BiMinus } from "react-icons/bi";
 import { AiFillCheckCircle } from "react-icons/ai";
 import { CgArrowLongRight } from "react-icons/cg";
 import { AiOutlineMenu } from "react-icons/ai";
+import { AiFillFacebook } from "react-icons/ai";
+import { FaTwitter } from "react-icons/fa";
+import { AiFillYoutube } from "react-icons/ai";
+import { LuInstagram } from "react-icons/lu";
 import MapIcon from "@mui/icons-material/Map";
 
 export const MyMailIcon = () => {
@@ -107,4 +111,16 @@ export const MyAiFillCheckCircle = () => {
 };
 export const MyAiOutlineMenu = () => {
   return <AiOutlineMenu></AiOutlineMenu>;
+};
+export const MyAiFillFacebook = () => {
+  return <AiFillFacebook></AiFillFacebook>;
+};
+export const MyFaTwitter = () => {
+  return <FaTwitter></FaTwitter>;
+};
+export const MyAiFillYoutube = () => {
+  return <AiFillYoutube></AiFillYoutube>;
+};
+export const MyLuInstagram = () => {
+  return <AiFillYoutube></AiFillYoutube>;
 };

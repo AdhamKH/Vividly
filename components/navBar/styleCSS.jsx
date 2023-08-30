@@ -609,8 +609,10 @@ export const NabBarStyle = styled.div`
   }
 
   .mobile-nav__social a {
+    svg {
+      color: var(--mibooz-primary);
+    }
     font-size: 16px;
-    color: var(--mibooz-primary);
     transition: 500ms;
   }
 

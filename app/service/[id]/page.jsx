@@ -31,6 +31,7 @@ import Link from "next/link";
 import { SingleServiceStyle } from "../singleServiceStyle";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import getService from "@/lib/getServiceData";
+import useSWR from "swr";
 
 function makeQueryClient() {
   const fetchMap = new Map();
@@ -44,16 +45,28 @@ function makeQueryClient() {
 
 const queryClient = makeQueryClient();
 
+const fetcher = (url) => fetch(url).then((r) => r.json());
+
 export default function UserPage({ params }) {
   console.log("params", params);
+  const [singleSService, setSingleSService] = React.useState();
   const { id } = params;
-  const singleService = use(
-    queryClient("singleService", () =>
-      fetch(`https://api.adgrouptech.com/api/v1/services/${id}`).then((res) =>
-        res.json()
-      )
-    )
+  // const singleService = use(
+  //   queryClient("singleService", () =>
+  //     fetch(`https://api.adgrouptech.com/api/v1/services/${id}`, {
+  //       cache: "no-store",
+  //     }).then((res) => res.json())
+  //   )
+  // );
+  const { data: singleService, error } = useSWR(
+    `https://api.adgrouptech.com/api/v1/services/${id}`,
+    fetcher
   );
+  // const { data: singleService, error } = useSWR(
+  //   `https://api.adgrouptech.com/api/v1/services/${id}`,
+  //   fetcher
+  // );
+
   const allServices = use(
     queryClient("allServices", () =>
       fetch(`https://api.adgrouptech.com/api/v1/services/company/10`).then(
@@ -63,6 +76,7 @@ export default function UserPage({ params }) {
   );
   let why = [];
   let benefits = [];
+  console.log("singleService", singleService);
   switch (id) {
     case "20":
       why = service_20_why;
