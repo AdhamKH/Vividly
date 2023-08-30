@@ -217,13 +217,17 @@ export default function UserPage({ params }) {
                         {singleService?.data?.description}
                       </p>
                     </div>
-                    <ul className="service-details__points">
+                    <ul className="quality_fast">
                       <li>
-                        <h4>high quality project</h4>
+                        <h4>
+                          <span>01-</span>high quality project
+                        </h4>
                         <div className="service-details__points-count"></div>
                       </li>
                       <li>
-                        <h4>Fast & relaible service</h4>
+                        <h4>
+                          <span>02-</span>Fast & relaible service
+                        </h4>
                         <div className="service-details__points-count"></div>
                       </li>
                     </ul>

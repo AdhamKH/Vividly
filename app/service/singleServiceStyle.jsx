@@ -288,63 +288,26 @@ export const SingleServiceStyle = styled.div`
     display: flex !important;
     justify-content: space-between;
   }
-
-  .service-details__points li {
-    position: relative;
-    background-color: var(--mibooz-extra);
-    float: left;
-    /* padding-top: 26px;
-    padding-bottom: 26px;
-    padding-left: 72px;
-    padding-right: 87px; */
-    padding: 20px 72px;
-  }
-
-  .service-details__points li + li {
-    margin-left: 30px;
-  }
-
-  .service-details__points li h4 {
-    position: relative;
-    font-size: 18px;
-    /* text-transform: uppercase; */
-    line-height: 28px;
-    width: 100%;
-  }
-
-  .service-details__points li h4:before {
-    position: absolute;
-    top: 15px;
-    left: -12px;
-    height: 1px;
-    width: 6px;
-    content: "";
-    background-color: var(--mibooz-primary);
-  }
-
-  .service-details__points-count {
-    height: 15px;
-    width: 15px;
-    position: absolute;
-    top: 50%;
-    left: 40px;
-    line-height: 30px;
-    transform: translateY(-50%);
-  }
-
-  .service-details__points-count:before {
-    position: absolute;
-    height: 15px;
-    width: 15px;
-    font-size: 18px;
-    line-height: 15px;
-    font-weight: 400;
-    counter-increment: count;
-    content: "0" counter(count);
-    transition: all 200ms linear;
-    transition-delay: 0.1s;
-    font-family: var(--mibooz-font-two);
-    color: var(--mibooz-primary);
+  .quality_fast {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    counter-reset: count;
+    list-style: none outside none !important ;
+    gap: 20px;
+    li {
+      display: flex;
+      align-items: center;
+      background-color: var(--mibooz-extra);
+      padding: 1rem 3rem;
+      flex: 1 1 0px;
+      width: 50%;
+      span {
+        color: var(--mibooz-primary);
+        padding-right: 8px;
+      }
+    }
   }
 
   .service-details__benefits {
@@ -486,5 +449,10 @@ export const SingleServiceStyle = styled.div`
   }
   .q_btn {
     display: flex;
+  }
+  @media (max-wdith: 720px) {
+    .quality_fast {
+      flex-direction: column;
+    }
   }
 `;

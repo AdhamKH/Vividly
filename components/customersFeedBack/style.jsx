@@ -9,7 +9,9 @@ export const CustomerFeedBackStyle = styled.div`
   .testimonial-two {
     position: relative;
     display: block;
-    padding: 240px 0 240px;
+    /* padding: 0 0 240px; */
+    padding-top: 1rem;
+    padding-bottom: 0.5rem;
   }
 
   .testimonial-two-shape {
@@ -38,7 +40,7 @@ export const CustomerFeedBackStyle = styled.div`
   .testimonial-two__left {
     position: relative;
     display: block;
-    margin-left: -242px;
+    /* margin-left: -242px; */
     z-index: 1;
   }
 

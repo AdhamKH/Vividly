@@ -22,8 +22,8 @@ const CustomerFeedBack = () => {
         </div>
         <div class="container">
           {/* <div class="row"> */}
-          <Grid container columns={12}>
-            <Grid xs={12} md={6}>
+          <Grid container columns={12} spacing={5}>
+            <Grid xs={12} md={12} lg={6}>
               {" "}
               <div
                 class="testimonial-two__left wow slideInLeft"
@@ -42,7 +42,7 @@ const CustomerFeedBack = () => {
                 </div>
               </div>
             </Grid>
-            <Grid xs={12} md={6}>
+            <Grid xs={12} md={12} lg={6}>
               {" "}
               <div class="testimonial-two__right">
                 <div class="section-title text-left">
