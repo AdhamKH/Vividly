@@ -131,7 +131,7 @@ export default function UserPage({ params }) {
               layout="fill"
               objectFit="cover"
               objectPosition="center"
-              src={pageBackground}
+              src={singleService?.data?.background_path || pageBackground}
             />
           </div>
 

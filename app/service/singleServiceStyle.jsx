@@ -26,6 +26,9 @@ export const SingleServiceStyle = styled.div`
     background-blend-mode: luminosity;
     opacity: 0.2;
     z-index: -1;
+    img {
+      background-attachment: fixed;
+    }
   }
 
   .page-header__inner {
