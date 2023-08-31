@@ -7,9 +7,9 @@ import "swiper/css/effect-fade";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { EffectFade, Navigation, Pagination, Autoplay } from "swiper/modules";
-import mainSlider1 from "../../assets/images/backgrounds/main-slider-1-1.jpg";
-import mainSlider2 from "../../assets/images/backgrounds/main-slider-1-2.jpg";
-import mainSlider3 from "../../assets/images/backgrounds/main-slider-1-3.jpg";
+import mainSlider1 from "../../assets/images/mainSlider/Augmented Reality Innovation.webp";
+import mainSlider2 from "../../assets/images/mainSlider/Brand Identity and Strategy.webp";
+import mainSlider3 from "../../assets/images/mainSlider/Digital Marketing and Engagement.webp";
 import mainSliderPadge from "../../assets/images/resources/main-slider-badge.png";
 import Image from "next/image";
 import { Grid } from "@mui/material";
@@ -74,7 +74,7 @@ const Header = () => {
                         {" "}
                         <div className="main-slider__content">
                           <div className="main-slider__title-box-1">
-                            <h2>
+                            <h2 style={{ visibility: "hidden" }}>
                               Creative <br />
                               Talent <br />
                               Here

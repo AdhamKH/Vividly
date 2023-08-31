@@ -132,6 +132,7 @@ export default function UserPage({ params }) {
               objectFit="cover"
               objectPosition="center"
               src={singleService?.data?.background_path || pageBackground}
+              alt={singleService?.data?.title}
             />
           </div>
 
