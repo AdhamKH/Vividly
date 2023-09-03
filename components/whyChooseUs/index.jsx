@@ -6,6 +6,7 @@ import { Grid } from "@mui/material";
 import Image from "next/image";
 import whyImg1 from "../../assets/images/resources/why-choose-one-img.jpg";
 import whyImg2 from "../../assets/images/resources/why-choose-one-content-img.jpg";
+import WhyVividly from "../whyVividly";
 const WhyChooseUS = () => {
   return (
     <WhyStyle>
@@ -86,7 +87,7 @@ const WhyChooseUS = () => {
                         </ul>
                       </div>
                     </div>
-                    <div class="why-choose-one__progress">
+                    {/* <div class="why-choose-one__progress">
                       <div class="why-choose-one__progress-single">
                         <h4 class="why-choose-one__progress-title">
                           Digital marketing
@@ -97,7 +98,8 @@ const WhyChooseUS = () => {
                           </div>
                         </div>
                       </div>
-                    </div>
+                    </div> */}
+                    <WhyVividly></WhyVividly>
                   </div>
                 </div>
               </Grid>

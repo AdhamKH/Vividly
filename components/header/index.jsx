@@ -74,7 +74,7 @@ const Header = () => {
                         {" "}
                         <div className="main-slider__content">
                           <div className="main-slider__title-box-1">
-                            <h2 style={{ visibility: "hidden" }}>
+                            <h2>
                               Creative <br />
                               Talent <br />
                               Here
