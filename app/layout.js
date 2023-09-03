@@ -2,6 +2,8 @@ import { Suspense } from "react";
 import "./globals.css";
 import { Inter } from "next/font/google";
 import { GlobalStyle } from "@/style/globalStyle";
+import StyledComponentsRegistry from "@/lib/registry";
+
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
@@ -18,7 +20,7 @@ export default function RootLayout({ children }) {
       <meta name="language" content="English"></meta>
       <body className={inter.className}>
         <GlobalStyle />
-        {children}
+        <StyledComponentsRegistry>{children}</StyledComponentsRegistry>
       </body>
     </html>
   );
