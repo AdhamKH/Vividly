@@ -5,10 +5,10 @@ import { Grid } from "@mui/material";
 import Image from "next/image";
 import { ServicesStyle } from "./ServicesStyle";
 import Link from "next/link";
-import { Parallax, ParallaxProvider } from "react-scroll-parallax";
 import DataFetching from "../Common/dataFetching";
 import dataFetching from "../Common/dataFetching";
 // import getAllservices from "@/lib/getAllservices";
+import "./mibooz-icons/style.css";
 const fetchingData = async () => {
   try {
     const res = await fetch(
@@ -20,6 +20,12 @@ const fetchingData = async () => {
   }
 };
 const dataPromis = fetchingData();
+let BRAND_icon = "";
+let DIGITAL_MARKETING_icon = "";
+let SEO_icon = "";
+let CREATIVE_DESIGN_icon = "";
+let AR_icon = "";
+let web_icon = "";
 const OurServices = () => {
   const data = use(dataPromis);
   let allServices = data?.data;
@@ -27,11 +33,6 @@ const OurServices = () => {
     id: service.id.toString(),
     title: service.title.toString(),
   }));
-  console.log("newAllService", newAllService);
-  console.log("allServices", allServices);
-  var encodedString = "%5Bid%5D";
-
-  console.log("check this", encodeURIComponent("%5Bid%5D"));
   return (
     <ServicesStyle id="services">
       {/* <ParallaxProvider> */}
@@ -86,7 +87,7 @@ const OurServices = () => {
               justifyItems="stretch"
               justifySelf="stretch"
             >
-              {newAllService?.map((service, index) => {
+              {newAllService?.slice(0, 5)?.map((service, index) => {
                 return (
                   <Grid item xs={12} md={6} lg={4}>
                     <div
@@ -96,7 +97,13 @@ const OurServices = () => {
                       {/* <!--Services One Single--> */}
                       <div className="services-one__single">
                         <h3 className="services-one__title">
-                          <Link rel="preload" href={`/service/${service?.id}`}>
+                          <Link
+                            rel="preload"
+                            href={{
+                              pathname: "/service",
+                              query: { id: `${service?.id}` },
+                            }}
+                          >
                             {service?.title}
                           </Link>
                         </h3>
@@ -109,6 +116,23 @@ const OurServices = () => {
                   </Grid>
                 );
               })}{" "}
+              <Grid item xs={12} md={6} lg={4}>
+                <div className="services-one__view-all">
+                  <div className="services-one__view-all-title-box">
+                    <h3 className="services-one__view-all-title">
+                      <Link href="all-services">
+                        View our <br />
+                        all services
+                      </Link>
+                    </h3>
+                  </div>
+                  <div className="services-one__view-all-arrow">
+                    <Link href="all-services">
+                      <span className="icon-arrow-right"></span>
+                    </Link>
+                  </div>
+                </div>
+              </Grid>
             </Grid>
           </div>
         </div>

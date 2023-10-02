@@ -31,7 +31,7 @@ export const NabBarStyle = styled.div`
 
   .main-menu {
     position: relative;
-    padding: 0 50px;
+    padding: 0 20px;
     z-index: 91;
   }
 
@@ -78,7 +78,7 @@ export const NabBarStyle = styled.div`
     position: relative;
     display: flex;
     align-items: center;
-    margin-right: 90px;
+    /* margin-right: 90px; */
   }
 
   .main-menu-wrapper__call-icon {
@@ -123,6 +123,7 @@ export const NabBarStyle = styled.div`
     display: flex;
     align-items: center;
     padding: 8.5px 0;
+    display: none;
   }
 
   .main-menu-wrapper__search-box:before {
@@ -147,7 +148,7 @@ export const NabBarStyle = styled.div`
   }
 
   .stricky-header.main-menu {
-    padding: 0 50px;
+    padding: 0 20px;
     background-color: var(--mibooz-black);
   }
 
@@ -285,6 +286,9 @@ export const NabBarStyle = styled.div`
     padding-bottom: 10px;
     font-size: 13px;
     transition: 500ms;
+    .active {
+      color: red;
+    }
   }
 
   .main-menu .main-menu__list li ul li:hover > a,

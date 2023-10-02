@@ -10,7 +10,7 @@ const FAQ = ({ faq, index, toggleFAQ }) => {
           {" "}
           <div className="faq-question">
             {faq.question}
-            {faq.open ? <> :</> : <> ...</>}
+            {faq.open ? <> : </> : <> ... </>}
           </div>
           {faq.open ? (
             <button onClick={() => toggleFAQ(index)}>

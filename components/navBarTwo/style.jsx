@@ -43,7 +43,7 @@ export const NavBarTwoStyle = styled.nav`
 
   .main-menu {
     position: relative;
-    padding: 0 50px;
+    padding: 0 20px;
     z-index: 91;
   }
 

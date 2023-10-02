@@ -75,7 +75,7 @@ export const CustomerFeedBackStyle = styled.div`
 
   .testimonial-two__img img {
     width: 100%;
-    mix-blend-mode: luminosity;
+    /* mix-blend-mode: luminosity; */
   }
 
   .testimonial-two__content {

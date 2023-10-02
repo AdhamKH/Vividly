@@ -33,7 +33,7 @@ export const AboutStyle = styled.div`
   }
 
   .about-page__img-1 img {
-    mix-blend-mode: luminosity;
+    /* mix-blend-mode: luminosity; */
   }
 
   .about-page__img-2 {
@@ -41,7 +41,7 @@ export const AboutStyle = styled.div`
   }
 
   .about-page__img-2 img {
-    mix-blend-mode: luminosity;
+    /* mix-blend-mode: luminosity; */
   }
 
   .about-page__badge {

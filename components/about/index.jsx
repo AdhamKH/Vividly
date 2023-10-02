@@ -2,8 +2,8 @@
 import React from "react";
 import { AboutStyle } from "./style";
 import Image from "next/image";
-import img1 from "../../assets/images/resources/about-page-img-1.jpg";
-import img2 from "../../assets/images/resources/about-page-img-2.jpg";
+import img1 from "../../assets/images/ABOUT/compressed/Photo 1.webp";
+import img2 from "../../assets/images/ABOUT/compressed/Photo 2 .webp";
 import pageImg from "../../assets/images/resources/about-page-badge.png";
 import Tilt from "../Common/Tilt";
 import { Grid } from "@mui/material";
@@ -12,12 +12,14 @@ import teamImg2 from "../../assets/images/team/team-one-img-2.jpg";
 import teamImg3 from "../../assets/images/team/team-one-img-3.jpg";
 import teamImg4 from "../../assets/images/team/team-one-img-4.jpg";
 // import teamImg5 from "../../assets/images/team/team-one-img-5.jpg";
+
 const About = () => {
   return (
     <AboutStyle id="about">
       <section className="about-page">
         <div className="container">
           <Grid container columns={12} spacing={3}>
+            {" "}
             <Grid item xs={12} md={6}>
               {" "}
               <div className="col-xl-6">
@@ -41,7 +43,7 @@ const About = () => {
                   </div>
                 </div>
               </div>
-            </Grid>
+            </Grid>{" "}
             <Grid item xs={12} md={6}>
               {" "}
               <div className="col-xl-6">

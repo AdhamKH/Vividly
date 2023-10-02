@@ -254,12 +254,12 @@ export const SingleServiceStyle = styled.div`
   .service-details__img {
     position: relative;
     display: block;
-    background-color: var(--mibooz-black);
+    /* background-color: var(--mibooz-black); */
   }
 
   .service-details__img img {
     width: 100%;
-    mix-blend-mode: luminosity;
+    /* mix-blend-mode: luminosity; */
   }
 
   .service-details__content {
@@ -374,12 +374,12 @@ export const SingleServiceStyle = styled.div`
   .service-details__benefits-img {
     position: relative;
     display: block;
-    background-color: var(--mibooz-black);
+    /* background-color: var(--mibooz-black); */
   }
 
   .service-details__benefits-img img {
     width: 100%;
-    mix-blend-mode: luminosity;
+    /* mix-blend-mode: luminosity; */
   }
 
   .service-details__faq {

@@ -4,9 +4,10 @@ import React from "react";
 import { WhyStyle } from "./whyStyle";
 import { Grid } from "@mui/material";
 import Image from "next/image";
-import whyImg1 from "../../assets/images/resources/why-choose-one-img.jpg";
-import whyImg2 from "../../assets/images/resources/why-choose-one-content-img.jpg";
+import whyImg1 from "../../assets/images/Why Choose US/Why Choose Us.webp";
+import whyImg2 from "../../assets/images/Why Choose US/Why to choose us 2.webp";
 import WhyVividly from "../whyVividly";
+import { Slide } from "react-awesome-reveal";
 const WhyChooseUS = () => {
   return (
     <WhyStyle>
@@ -16,20 +17,22 @@ const WhyChooseUS = () => {
             <Grid container columns={12}>
               <Grid item lg={6}>
                 {" "}
-                <div
-                  class="col-xl-6 wow slideInLeft"
-                  data-wow-delay="100ms"
-                  data-wow-duration="2500ms"
-                >
-                  <div class="why-choose-one__left">
-                    <div class="why-choose-one__img">
-                      <Image src={whyImg1} alt="" />
+                <Slide direction="left">
+                  <div
+                    class="col-xl-6 wow slideInLeft"
+                    data-wow-delay="100ms"
+                    data-wow-duration="2500ms"
+                  >
+                    <div class="why-choose-one__left">
+                      <div class="why-choose-one__img">
+                        <Image src={whyImg1} alt="" />
+                      </div>
+                      <div class="why-choose-one-box-1"></div>
+                      <div class="why-choose-one-box-2"></div>
+                      <div class="why-choose-one-box-3"></div>
                     </div>
-                    <div class="why-choose-one-box-1"></div>
-                    <div class="why-choose-one-box-2"></div>
-                    <div class="why-choose-one-box-3"></div>
                   </div>
-                </div>
+                </Slide>
               </Grid>
               <Grid item lg={6}>
                 {" "}

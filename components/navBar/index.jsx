@@ -4,6 +4,7 @@ import { NabBarStyle, StickeyNavBar } from "./styleCSS";
 import Image from "next/image";
 import phoneIcon from "../../assets/images/icon/phone-icon.png";
 import logo from "../../assets/images/vividly logo-01-06.svg";
+import whiteVividlyLogo from "../../assets/images/whiteVividlyLogo.svg";
 import Link from "next/link";
 import {
   MyAiFillFacebook,
@@ -13,6 +14,8 @@ import {
   MyFaTwitter,
   MyLuInstagram,
 } from "../Common/icons";
+import { usePathname } from "next/navigation";
+
 const Navbar = () => {
   const [stickyClass, setStickyClass] = useState("");
   const [navMobile, setNavMobile] = React.useState(false);
@@ -27,6 +30,8 @@ const Navbar = () => {
       windowHeight > 150 ? setStickyClass("sticky-nav") : setStickyClass("");
     }
   };
+  const currentRoute = usePathname();
+  console.log("currentRoute", currentRoute === "/");
   return (
     <NabBarStyle navMobile={navMobile}>
       {stickyClass ? (
@@ -39,7 +44,7 @@ const Navbar = () => {
                   <div className="main-menu-wrapper">
                     <div className="main-menu-wrapper__logo">
                       <Link href="/">
-                        <Image src={logo} alt="logo" width="200" />
+                        <Image src={whiteVividlyLogo} alt="logo" width="200" />
                       </Link>
                     </div>
                     <div className="main-menu-wrapper__main-menu">
@@ -54,7 +59,13 @@ const Navbar = () => {
                         </i>
                       </a>
                       <ul className="main-menu__list">
-                        <li className="dropdown">
+                        <li
+                          className={
+                            currentRoute === "/"
+                              ? "current dropdown"
+                              : "dropdown"
+                          }
+                        >
                           <Link href="/">Home</Link>
                           {/* <ul>
                             <li>
@@ -128,15 +139,10 @@ const Navbar = () => {
               </ul> */}
                         </li>
                         <li className="dropdown">
+                          <Link href="/#faqs">Faqs</Link>
+                        </li>
+                        <li className="dropdown">
                           <Link href="/#projects">Projects</Link>
-                          {/* <ul>
-                            <li>
-                              <a href="project.html">Projects</a>
-                            </li>
-                            <li>
-                              <a href="project-details.html">Project Details</a>
-                            </li>
-                          </ul> */}
                         </li>
                         {/* <li className="dropdown">
                           <a href="#">Blog</a>
@@ -152,7 +158,17 @@ const Navbar = () => {
                             </li>
                           </ul>
                         </li> */}
-                        <li>
+                        <li
+                          class="dropdown"
+                          className={currentRoute === "/blog" ? "current" : ""}
+                        >
+                          <Link href="/blog">blog</Link>
+                        </li>
+                        <li
+                          className={
+                            currentRoute === "/contact-us" ? "current" : ""
+                          }
+                        >
                           <Link href="/contact-us">Contact</Link>
                         </li>
                       </ul>
@@ -190,7 +206,7 @@ const Navbar = () => {
               <div className="main-menu-wrapper">
                 <div className="main-menu-wrapper__logo">
                   <Link href="/">
-                    <Image src={logo} alt="logo" width="200" />
+                    <Image src={whiteVividlyLogo} alt="logo" width="200" />
                   </Link>
                 </div>
                 <div className="main-menu-wrapper__main-menu">
@@ -205,7 +221,7 @@ const Navbar = () => {
                     </i>
                   </a>
                   <ul className="main-menu__list">
-                    <li className="dropdown">
+                    <li className={currentRoute === "/" ? "current" : ""}>
                       <Link href="/">Home</Link>
 
                       {/* <ul>
@@ -280,6 +296,9 @@ const Navbar = () => {
               </ul> */}
                     </li>
                     <li className="dropdown">
+                      <Link href="/#faqs">Faqs</Link>
+                    </li>
+                    <li className="dropdown">
                       <Link href="#projects">Projects</Link>
                       {/* <ul>
                         <li>
@@ -304,7 +323,14 @@ const Navbar = () => {
                         </li>
                       </ul>
                     </li> */}
-                    <li>
+                    <li className={currentRoute === "/blog" ? "current" : ""}>
+                      <Link href="/blog">blog</Link>
+                    </li>
+                    <li
+                      className={
+                        currentRoute === "/contact-us" ? "current" : ""
+                      }
+                    >
                       <Link href="/contact-us">Contact</Link>
                     </li>
                   </ul>
@@ -347,13 +373,13 @@ const Navbar = () => {
               </span>
               <div class="logo-box">
                 <a href="index.html" aria-label="logo image">
-                  <Image src={logo} alt="logo" width="155"></Image>
+                  <Image src={whiteVividlyLogo} alt="logo" width="155"></Image>
                 </a>
               </div>
               {/* <!-- /.logo-box --> */}
               <div class="mobile-nav__container">
                 <ul class="main-menu__list">
-                  <li class="dropdown current">
+                  <li className={currentRoute === "/" ? "current" : ""}>
                     <Link href="/" class="">
                       Home
                     </Link>
@@ -364,8 +390,19 @@ const Navbar = () => {
                   <li class="dropdown">
                     <Link href="/#services">Services</Link>
                   </li>
+                  <li className="dropdown">
+                    <Link href="/#faqs">Faqs</Link>
+                  </li>
                   <li class="dropdown">
                     <Link href="/#">Projects</Link>
+                  </li>
+                  <li className={currentRoute === "/blog" ? "current" : ""}>
+                    <Link href="/blog">blog</Link>
+                  </li>
+                  <li
+                    className={currentRoute === "/contact-us" ? "current" : ""}
+                  >
+                    <Link href="/contact-us">contact-us</Link>
                   </li>
 
                   <li>

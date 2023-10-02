@@ -15,7 +15,6 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <meta name="keywords" content="vividly,web,marketing" />
-      <meta name="robots" content="index, follow" />
       <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
       <meta name="language" content="English"></meta>
       <body className={inter.className}>

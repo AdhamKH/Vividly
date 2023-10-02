@@ -2,7 +2,6 @@
 import { styled } from "styled-components";
 
 export const ServicesStyle = styled.section`
-  /* background-color: red; */
   .services-one {
     position: relative;
     display: block;
@@ -67,7 +66,7 @@ export const ServicesStyle = styled.section`
     padding: 82px 40px 34px;
     overflow: hidden;
     z-index: 1;
-    min-height: 11rem;
+    min-height: 12rem;
   }
 
   .services-one__single:before {
@@ -101,6 +100,7 @@ export const ServicesStyle = styled.section`
     font-size: 20px;
     text-transform: uppercase;
     line-height: 25px;
+    max-width: 70%;
   }
 
   .services-one__title a {
@@ -154,6 +154,7 @@ export const ServicesStyle = styled.section`
   }
 
   .services-one__view-all {
+    min-height: 12rem;
     position: relative;
     display: flex;
     align-items: center;

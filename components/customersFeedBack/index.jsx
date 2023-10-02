@@ -2,7 +2,7 @@ import React from "react";
 import { CustomerFeedBackStyle } from "./style";
 import Image from "next/image";
 import testimonialTwo from "../../assets/images/shapes/testimonial-two-shape.png";
-import testimonialTwoImage from "../../assets/images/testimonial/testimonial-two-img.jpg";
+import testimonialTwoImage from "../../assets/images/Our customer feedback.webp";
 import { Grid } from "@mui/material";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";

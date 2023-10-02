@@ -305,7 +305,7 @@ export default function UserPage({ params }) {
                       > */}
                       <div className="faqs">
                         <h3 className="service-details__benefits-title">
-                          Why This Service
+                          Why {singleService?.data?.title}
                         </h3>
                         {faqs.map((faq, index) => (
                           <FAQ
