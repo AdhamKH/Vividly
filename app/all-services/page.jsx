@@ -26,7 +26,7 @@ const dataPromis = fetchingData();
 const page = () => {
   const data = use(dataPromis);
   let allServices = data?.data;
-  let newAllService = allServices.map((service) => ({
+  let newAllService = allServices?.map((service) => ({
     id: service.id.toString(),
     title: service.title.toString(),
   }));
@@ -225,7 +225,7 @@ const page = () => {
           </div>
         </section>
 
-        <section className="two-boxes">
+        {/* <section className="two-boxes">
           <div className="container">
             <Grid container spacing={4}>
               <Grid item md={6} xs={12}>
@@ -236,10 +236,6 @@ const page = () => {
                   data-wow-duration="2500ms"
                 >
                   <div className="two-boxes__single">
-                    {/* <div
-                    className="two-boxes__bg"
-                    style="background-image: url(assets/images/backgrounds/two-boxes-bg-1.jpg)"
-                  ></div> */}
                     <Image
                       className="two-boxes__bg"
                       layout="fill"
@@ -289,11 +285,8 @@ const page = () => {
                 </div>
               </Grid>
             </Grid>
-            {/* <div className="row"> */}
-
-            {/* </div> */}
           </div>
-        </section>
+        </section> */}
 
         <section className="services-one">
           <Image
@@ -346,10 +339,10 @@ const page = () => {
                   >
                     <div className="services-one__single">
                       <h3 className="services-one__title">
-                        <a href="mobile-application.html">
-                          mobile <br />
-                          applications
-                        </a>
+                        {/* <a href="mobile-application.html"> */}
+                        mobile <br />
+                        applications
+                        {/* </a> */}
                       </h3>
                       <div className="services-one__icon">
                         <span className="icon-online-shopping"></span>
@@ -365,10 +358,10 @@ const page = () => {
                   >
                     <div className="services-one__single">
                       <h3 className="services-one__title">
-                        <a href="digital-marketing.html">
-                          digital <br />
-                          marketings
-                        </a>
+                        {/* <a href="digital-marketing.html"> */}
+                        digital <br />
+                        marketings
+                        {/* </a> */}
                       </h3>
                       <div className="services-one__icon">
                         <span className="icon-growth"></span>
@@ -385,10 +378,10 @@ const page = () => {
                   >
                     <div className="services-one__single">
                       <h3 className="services-one__title">
-                        <a href="graphic-designing.html">
-                          Graphic <br />
-                          Designings
-                        </a>
+                        {/* <a href="graphic-designing.html"> */}
+                        Graphic <br />
+                        Designings
+                        {/* </a> */}
                       </h3>
                       <div className="services-one__icon">
                         <span className="icon-webpage"></span>
@@ -405,10 +398,10 @@ const page = () => {
                   >
                     <div className="services-one__single">
                       <h3 className="services-one__title">
-                        <a href="website-development.html">
-                          Website <br />
-                          developments
-                        </a>
+                        {/* <a href="website-development.html"> */}
+                        Website <br />
+                        developments
+                        {/* </a> */}
                       </h3>
                       <div className="services-one__icon">
                         <span className="icon-front-end"></span>
@@ -425,10 +418,10 @@ const page = () => {
                   >
                     <div className="services-one__single">
                       <h3 className="services-one__title">
-                        <a href="social-marketing.html">
-                          Social <br />
-                          marketings
-                        </a>
+                        {/* <a href="social-marketing.html"> */}
+                        Social <br />
+                        marketings
+                        {/* </a> */}
                       </h3>
                       <div className="services-one__icon">
                         <span className="icon-bullhorn"></span>
@@ -445,15 +438,15 @@ const page = () => {
                     <div className="services-one__view-all">
                       <div className="services-one__view-all-title-box">
                         <h3 className="services-one__view-all-title">
-                          <a href="services.html">
-                            View our <br /> all services
-                          </a>
+                          {/* <a href="services.html"> */}
+                          View our <br /> all services
+                          {/* </a> */}
                         </h3>
                       </div>
                       <div className="services-one__view-all-arrow">
-                        <a href="services.html">
+                        <Link href="all-services">
                           <span className="icon-arrow-right"></span>
-                        </a>
+                        </Link>
                       </div>
                     </div>
                   </div>

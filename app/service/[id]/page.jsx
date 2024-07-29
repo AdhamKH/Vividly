@@ -180,7 +180,7 @@ export default function UserPage({ params }) {
                             <li className={service.id == id ? "current" : ""}>
                               <Link href={`/service/${service?.id}`}>
                                 <p> {service?.title} </p>
-                                <span className="icon-arrow-right">
+                                <span className="">
                                   <MyCgArrowLongRight />
                                 </span>
                               </Link>
@@ -258,7 +258,7 @@ export default function UserPage({ params }) {
                                   return (
                                     <li key={index}>
                                       <div className="icon">
-                                        <span className="icon-check">
+                                        <span className="">
                                           {" "}
                                           <MyAiFillCheckCircle />
                                         </span>

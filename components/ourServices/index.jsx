@@ -29,7 +29,7 @@ let web_icon = "";
 const OurServices = () => {
   const data = use(dataPromis);
   let allServices = data?.data;
-  let newAllService = allServices.map((service) => ({
+  let newAllService = allServices?.map((service) => ({
     id: service.id.toString(),
     title: service.title.toString(),
   }));

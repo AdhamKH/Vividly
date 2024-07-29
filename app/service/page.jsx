@@ -27,6 +27,12 @@ import {
   service_24_why,
   service_25_benefits,
   service_25_why,
+  service_26_benefits,
+  service_26_why,
+  service_27_benefits,
+  service_27_why,
+  service_28_benefits,
+  service_28_why,
 } from "@/components/dynamicArrays/services";
 import Link from "next/link";
 import { SingleServiceStyle } from "./singleServiceStyle";
@@ -119,6 +125,18 @@ export default function UserPage() {
     case "25":
       why = service_25_why;
       benefits = service_25_benefits;
+      background_img_base64 = background_id_25;
+    case "26":
+      why = service_26_why;
+      benefits = service_26_benefits;
+      background_img_base64 = background_id_25;
+    case "27":
+      why = service_27_why;
+      benefits = service_27_benefits;
+      background_img_base64 = background_id_25;
+    case "28":
+      why = service_28_why;
+      benefits = service_28_benefits;
       background_img_base64 = background_id_25;
 
     default:
@@ -293,7 +311,7 @@ export default function UserPage() {
                                   return (
                                     <li key={index}>
                                       <div className="icon">
-                                        <span className="icon-check">
+                                        <span className="">
                                           {" "}
                                           <MyAiFillCheckCircle />
                                         </span>

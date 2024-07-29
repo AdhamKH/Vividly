@@ -58,6 +58,7 @@ const Header = () => {
                       layout="fill"
                       objectFit="cover"
                       objectPosition="center"
+                      fill
                     />
                   </div>
                   {/* image-layer */}
@@ -124,6 +125,7 @@ const Header = () => {
                       layout="fill"
                       objectFit="cover"
                       objectPosition="center"
+                      fill
                     />
                   </div>
                   {/* image-layer  */}
@@ -183,6 +185,7 @@ const Header = () => {
                       layout="fill"
                       objectFit="cover"
                       objectPosition="center"
+                      fill
                     />
                   </div>
                   {/* image-layer */}
@@ -241,7 +244,7 @@ const Header = () => {
                     className="swiper-button-prev"
                     id="main-slider__swiper-button-prev"
                   >
-                    <span className="icon-arrow-left">
+                    <span className="">
                       <MyChevronLeftIcon />
                     </span>
                   </div>
@@ -249,7 +252,7 @@ const Header = () => {
                     className="swiper-button-next"
                     id="main-slider__swiper-button-next"
                   >
-                    <span className="icon-arrow-right">
+                    <span className="">
                       <MyChevronRightIcon />
                     </span>
                   </div>
